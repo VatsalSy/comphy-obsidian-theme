@@ -1364,6 +1364,33 @@ h6:after {
     border-top: 1px solid black;
     padding-top: 2em;
   }
+
+  /* Print-specific table styles for PDF export */
+  table {
+    page-break-inside: avoid;
+  }
+
+  table tr {
+    border-top: 1px solid #cccccc !important;
+  }
+
+  table tr th,
+  table tr td {
+    color: #000000 !important;
+    border: 1px solid #cccccc !important;
+  }
+
+  table tr:nth-child(odd) {
+    background-color: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  table tr:nth-child(even) {
+    background-color: #f0f0f0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 }
 /** ______ 2.14.1 Banded Table Rows -- https://discord.com/channels/686053708261228577/702656734631821413/777106171948564500 */
 table {
@@ -1372,25 +1399,27 @@ table {
 }
 
 table tr {
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid var(--background-modifier-border);
   margin: 0;
   padding: 0;
 }
 
-table tr:nth-child(2n) {
-  background-color: var(--dark1);
+/* Explicit text color for table cells */
+table tr th,
+table tr td {
+  color: var(--text-normal);
 }
 
 table tr th {
   font-weight: bold;
-  border: 1px solid #cccccc;
+  border: 1px solid var(--background-modifier-border);
   text-align: left;
   margin: 0;
   padding: 6px 13px;
 }
 
 table tr td {
-  border: 1px solid #cccccc;
+  border: 1px solid var(--background-modifier-border);
   text-align: left;
   margin: 0;
   padding: 6px 13px;
@@ -1404,6 +1433,23 @@ table tr td:first-child {
 table tr th:last-child,
 table tr td:last-child {
   margin-bottom: 0;
+}
+
+/* Theme-aware alternating row colors */
+.theme-dark table tr:nth-child(odd) {
+  background-color: var(--dark0);
+}
+
+.theme-dark table tr:nth-child(even) {
+  background-color: var(--dark1);
+}
+
+.theme-light table tr:nth-child(odd) {
+  background-color: var(--light1);
+}
+
+.theme-light table tr:nth-child(even) {
+  background-color: var(--light2);
 }
 /** ________ 2.14.2 Full Width Tables */
 .markdown-preview-view table {
