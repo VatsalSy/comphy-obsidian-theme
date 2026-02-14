@@ -2,7 +2,6 @@
   "name": "obsidian-comphy-gruvbox",
   "version": "1.0.0",
   "description": "A Gruvbox-inspired Obsidian theme for academic and research workflows.",
-  "main": "index.js",
   "scripts": {
     "lint:css": "stylelint \"src/theme/**/*.css\" \"theme.css\"",
     "test": "echo \"Error: no test specified\" && exit 1"

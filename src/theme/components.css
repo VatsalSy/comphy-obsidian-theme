@@ -272,6 +272,7 @@ select,
   font-variant-ligatures: none;
 }
 
+/* Keep native dropdown rendering to avoid cross-platform custom select artifacts. */
 select {
   -webkit-appearance: menulist;
   appearance: auto;
