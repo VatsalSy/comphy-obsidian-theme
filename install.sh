@@ -44,6 +44,14 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 SOURCE_MANIFEST="$SCRIPT_DIR/manifest.json"
 SOURCE_THEME_CSS="$SCRIPT_DIR/theme.css"
 SOURCE_VERSIONS="$SCRIPT_DIR/versions.json"
+SOURCE_THEME_DIR="$SCRIPT_DIR/src/theme"
+BUILD_SCRIPT="$SCRIPT_DIR/scripts/build-theme.sh"
+
+if [[ -d "$SOURCE_THEME_DIR" && -f "$BUILD_SCRIPT" ]]; then
+  echo "Detected modular theme sources at $SOURCE_THEME_DIR"
+  echo "Rebuilding theme.css before install..."
+  bash "$BUILD_SCRIPT"
+fi
 
 if [[ ! -f "$SOURCE_MANIFEST" ]]; then
   echo "Error: missing source manifest at $SOURCE_MANIFEST" >&2

@@ -64,20 +64,57 @@ a.external-link:hover {
   padding: 0.08em 0.38em;
 }
 
-.markdown-rendered pre,
-.HyperMD-codeblock,
-.HyperMD-codeblock-bg,
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+.markdown-rendered pre {
   background: linear-gradient(170deg, color-mix(in srgb, var(--pre-code) 82%, var(--accent-650) 18%), var(--pre-code));
   color: var(--code-normal);
   border: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
-}
-
-.markdown-rendered pre {
   padding: var(--space-4);
   overflow-x: auto;
+}
+
+/* Keep code fences in edit/source mode as one coherent container, not per-line pills. */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-bg {
+  background: linear-gradient(170deg, color-mix(in srgb, var(--pre-code) 82%, var(--accent-650) 18%), var(--pre-code));
+  color: var(--code-normal);
+  border-left: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
+  border-right: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock.HyperMD-codeblock-begin,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-bg.HyperMD-codeblock-begin {
+  border-top: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+  margin-top: var(--space-2);
+  padding-top: calc(var(--space-1) + 1px);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock.HyperMD-codeblock-end,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-bg.HyperMD-codeblock-end {
+  border-bottom: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+  padding-bottom: calc(var(--space-1) + 1px);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end),
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end) {
+  padding-inline: var(--space-4);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin .cm-formatting-code-block,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-end .cm-formatting-code-block {
+  color: var(--text-muted);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin .cm-hmd-codeblock {
+  color: color-mix(in srgb, var(--accent-200) 72%, var(--text-primary) 28%);
 }
 
 .cm-s-obsidian span.cm-keyword,
@@ -218,10 +255,36 @@ input.task-list-item-checkbox:checked {
 .suggestion-item,
 .menu,
 .dropdown,
+select,
 .modal,
 .prompt-results {
   background: color-mix(in srgb, var(--background-secondary) 88%, var(--accent-650) 12%);
   border-color: var(--background-modifier-border);
+}
+
+.dropdown,
+select,
+.setting-item-control .dropdown,
+.setting-item-control select {
+  background-image: none !important;
+  background-repeat: no-repeat !important;
+  font-family: var(--font-display), sans-serif;
+  font-variant-ligatures: none;
+}
+
+select {
+  -webkit-appearance: menulist;
+  appearance: auto;
+  color: var(--text-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-sm);
+  padding: 0.3em 0.6em;
+}
+
+.menu-item,
+.dropdown-option,
+.suggestion-item {
+  background-image: none !important;
 }
 
 .suggestion-item.is-selected,

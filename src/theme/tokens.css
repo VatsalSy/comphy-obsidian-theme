@@ -172,8 +172,12 @@
 
   --background-modifier-border: var(--border-subtle);
   --background-modifier-border-hover: var(--border-strong);
+  --background-modifier-border-focus: transparent;
+  --background-modifier-border-focus-hover: transparent;
   --background-modifier-active-hover: rgba(var(--accent-rgb), 0.16);
   --background-modifier-hover: rgba(255, 255, 255, 0.04);
+  --tab-outline-color: transparent;
+  --tab-outline-width: 0px;
 
   --pre-code: #1b1622;
   --code-normal: #d6cde4;
@@ -244,8 +248,12 @@
 
   --background-modifier-border: var(--border-subtle);
   --background-modifier-border-hover: var(--border-strong);
+  --background-modifier-border-focus: transparent;
+  --background-modifier-border-focus-hover: transparent;
   --background-modifier-active-hover: rgba(var(--accent-rgb), 0.11);
   --background-modifier-hover: rgba(27, 19, 34, 0.04);
+  --tab-outline-color: transparent;
+  --tab-outline-width: 0px;
 
   --pre-code: #f1eaf5;
   --code-normal: #3b2b45;

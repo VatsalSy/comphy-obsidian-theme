@@ -88,6 +88,8 @@ A sanitized `demo-vault/` is included for previewing theme behavior.
 bash install.sh demo-vault
 ```
 
+When run from this repository, `install.sh` auto-builds `theme.css` from `src/theme/*.css` before copying files into the vault.
+
 `demo-vault/.obsidian/` is not tracked.
 
 ## Recommended Font

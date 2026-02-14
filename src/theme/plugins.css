@@ -125,6 +125,17 @@
   color: var(--accent-300);
 }
 
+#calendar-container table {
+  border: none;
+  border-collapse: separate;
+}
+
+#calendar-container table :is(th, td) {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
 /* Popovers and embeds */
 .popover.hover-popover {
   border: 1px solid color-mix(in srgb, var(--accent-300) 38%, var(--background-modifier-border) 62%);

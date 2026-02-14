@@ -181,8 +181,12 @@
 
   --background-modifier-border: var(--border-subtle);
   --background-modifier-border-hover: var(--border-strong);
+  --background-modifier-border-focus: transparent;
+  --background-modifier-border-focus-hover: transparent;
   --background-modifier-active-hover: rgba(var(--accent-rgb), 0.16);
   --background-modifier-hover: rgba(255, 255, 255, 0.04);
+  --tab-outline-color: transparent;
+  --tab-outline-width: 0px;
 
   --pre-code: #1b1622;
   --code-normal: #d6cde4;
@@ -253,8 +257,12 @@
 
   --background-modifier-border: var(--border-subtle);
   --background-modifier-border-hover: var(--border-strong);
+  --background-modifier-border-focus: transparent;
+  --background-modifier-border-focus-hover: transparent;
   --background-modifier-active-hover: rgba(var(--accent-rgb), 0.11);
   --background-modifier-hover: rgba(27, 19, 34, 0.04);
+  --tab-outline-color: transparent;
+  --tab-outline-width: 0px;
 
   --pre-code: #f1eaf5;
   --code-normal: #3b2b45;
@@ -540,20 +548,57 @@ a.external-link:hover {
   padding: 0.08em 0.38em;
 }
 
-.markdown-rendered pre,
-.HyperMD-codeblock,
-.HyperMD-codeblock-bg,
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+.markdown-rendered pre {
   background: linear-gradient(170deg, color-mix(in srgb, var(--pre-code) 82%, var(--accent-650) 18%), var(--pre-code));
   color: var(--code-normal);
   border: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
-}
-
-.markdown-rendered pre {
   padding: var(--space-4);
   overflow-x: auto;
+}
+
+/* Keep code fences in edit/source mode as one coherent container, not per-line pills. */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-bg {
+  background: linear-gradient(170deg, color-mix(in srgb, var(--pre-code) 82%, var(--accent-650) 18%), var(--pre-code));
+  color: var(--code-normal);
+  border-left: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
+  border-right: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock.HyperMD-codeblock-begin,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-bg.HyperMD-codeblock-begin {
+  border-top: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+  margin-top: var(--space-2);
+  padding-top: calc(var(--space-1) + 1px);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock.HyperMD-codeblock-end,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-bg.HyperMD-codeblock-end {
+  border-bottom: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+  padding-bottom: calc(var(--space-1) + 1px);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end),
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end) {
+  padding-inline: var(--space-4);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin .cm-formatting-code-block,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-end .cm-formatting-code-block {
+  color: var(--text-muted);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin .cm-hmd-codeblock {
+  color: color-mix(in srgb, var(--accent-200) 72%, var(--text-primary) 28%);
 }
 
 .cm-s-obsidian span.cm-keyword,
@@ -694,10 +739,36 @@ input.task-list-item-checkbox:checked {
 .suggestion-item,
 .menu,
 .dropdown,
+select,
 .modal,
 .prompt-results {
   background: color-mix(in srgb, var(--background-secondary) 88%, var(--accent-650) 12%);
   border-color: var(--background-modifier-border);
+}
+
+.dropdown,
+select,
+.setting-item-control .dropdown,
+.setting-item-control select {
+  background-image: none !important;
+  background-repeat: no-repeat !important;
+  font-family: var(--font-display), sans-serif;
+  font-variant-ligatures: none;
+}
+
+select {
+  -webkit-appearance: menulist;
+  appearance: auto;
+  color: var(--text-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-sm);
+  padding: 0.3em 0.6em;
+}
+
+.menu-item,
+.dropdown-option,
+.suggestion-item {
+  background-image: none !important;
 }
 
 .suggestion-item.is-selected,
@@ -1130,6 +1201,17 @@ table th {
   color: var(--accent-300);
 }
 
+#calendar-container table {
+  border: none;
+  border-collapse: separate;
+}
+
+#calendar-container table :is(th, td) {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
 /* Popovers and embeds */
 .popover.hover-popover {
   border: 1px solid color-mix(in srgb, var(--accent-300) 38%, var(--background-modifier-border) 62%);
@@ -1224,7 +1306,19 @@ pre.language-info::before { content: "Info"; }
 /* ========================================================================== */
 /* Accessibility and motion controls. */
 
-:focus-visible {
+:where(
+  button,
+  .clickable-icon,
+  .nav-file-title,
+  .nav-folder-title,
+  a,
+  input,
+  textarea,
+  select,
+  .dropdown,
+  summary,
+  [role="button"]
+):focus-visible {
   outline: 2px solid var(--focus-ring) !important;
   outline-offset: 2px;
   box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.24);
@@ -1259,9 +1353,36 @@ textarea:focus-visible {
   color: var(--accent-600);
 }
 
-/* Remove distracting purple border around active editor pane */
-.workspace .mod-root .workspace-leaf.mod-active {
-  border-color: transparent;
+/* Never draw keyboard focus rings around editor pane containers. */
+.workspace-leaf:focus-visible,
+.workspace-leaf-content:focus-visible,
+.workspace-leaf.mod-active:focus-visible,
+.workspace-leaf.mod-active .workspace-leaf-content:focus-visible,
+.workspace-leaf.mod-active .view-content:focus-visible,
+.workspace-leaf.mod-active .markdown-source-view:focus-visible,
+.workspace-leaf.mod-active .markdown-reading-view:focus-visible,
+.workspace-leaf.mod-active .markdown-preview-view:focus-visible,
+.workspace-leaf.mod-active .cm-editor:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove distracting active-pane border while preserving control focus rings. */
+.workspace .mod-root .workspace-leaf.mod-active,
+.workspace .mod-root .workspace-leaf.mod-active .workspace-leaf-content,
+.workspace .mod-root .workspace-leaf.mod-active .workspace-tab-container,
+.workspace .mod-root .workspace-leaf.mod-active .view-content {
+  --tab-outline-color: transparent;
+  --tab-outline-width: 0px;
+  border-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.workspace .mod-root .workspace-leaf.mod-active .cm-editor:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .nav-file-title.is-active,
