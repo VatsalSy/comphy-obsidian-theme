@@ -2,8 +2,8 @@
 
 This vault is a public, sanitized showcase for the `CoMPhy Gruvbox` theme.
 
+See [[api-reference]] for a quick command reference.
 
-[[api-reference]]
 ## Install Theme Into This Vault
 
 From the repository root, run:
@@ -37,11 +37,12 @@ Folder order is intentionally arranged to preview folder gradients:
 
 Open `0-Quick-Start/theme-showcase.md` and `0-Quick-Start/dataview-demo.md` first.
 
-- This is a test
-	- this is another test for nested loop
-		- another nest
-	- out of layered nest
-- out of nest
+## List Styling Preview
+
+- Mixed list types
+  - Tasks, bullets, and ordered lists
+    - Deep nesting for indentation and connectors
+- Use this section to visually verify list styling in your setup
 
 # Title
 

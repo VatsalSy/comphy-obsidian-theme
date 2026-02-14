@@ -68,6 +68,7 @@ textarea:focus-visible {
 .workspace .mod-root .workspace-leaf.mod-active .view-content {
   --tab-outline-color: transparent;
   --tab-outline-width: 0px;
+
   border-color: transparent !important;
   outline: none !important;
   box-shadow: none !important;
@@ -77,6 +78,20 @@ textarea:focus-visible {
 .workspace .mod-root .workspace-leaf.mod-active:focus-visible {
   outline: none !important;
   box-shadow: none !important;
+}
+
+/* Restore subtle keyboard focus cues for pane content and editor surfaces. */
+.workspace .mod-root .workspace-leaf .workspace-leaf-content:focus-visible,
+.workspace .mod-root .workspace-leaf .markdown-reading-view:focus-visible,
+.workspace .mod-root .workspace-leaf .markdown-preview-view:focus-visible,
+.workspace .mod-root .workspace-leaf .cm-editor:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active .workspace-leaf-content:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active .markdown-reading-view:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active .markdown-preview-view:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active .cm-editor:focus-visible {
+  outline: 1px solid color-mix(in srgb, var(--focus-ring) 60%, var(--background-modifier-border) 40%) !important;
+  outline-offset: -1px;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--focus-ring) 22%, transparent) !important;
 }
 
 .nav-file-title.is-active,
