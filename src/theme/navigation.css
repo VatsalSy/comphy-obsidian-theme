@@ -173,6 +173,7 @@
 
 .nav-file-title-content::before {
   content: "•";
+  color: var(--accent-250);
   color: color-mix(in srgb, var(--accent-250) 72%, var(--text-muted) 28%);
   font-size: 0.95em;
 }
