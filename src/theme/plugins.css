@@ -1,0 +1,211 @@
+/* Plugin adapters with broad coverage for existing workflow. */
+
+/* Dataview table as cards */
+.markdown-preview-view table.table-view-table {
+  display: block !important;
+  border: none !important;
+  background: transparent !important;
+  width: 100% !important;
+}
+
+.markdown-preview-view table.table-view-table thead {
+  display: none !important;
+}
+
+.markdown-preview-view table.table-view-table tbody {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 280px));
+  gap: 1rem !important;
+}
+
+.markdown-preview-view table.table-view-table tr,
+.markdown-preview-view :is(ul.dataview-list-ul, ul.dv-list, div[class*="dataview"] > ul) > li {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.25rem;
+  min-width: 220px;
+  max-width: 280px;
+  margin: 0 !important;
+  padding: 0.95rem 1rem !important;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid color-mix(in srgb, var(--accent-300) 34%, var(--background-modifier-border) 66%) !important;
+  background: linear-gradient(155deg, rgba(var(--accent-rgb), 0.22) 0%, color-mix(in srgb, var(--background-secondary-alt) 90%, #000 10%) 100%) !important;
+  box-shadow: var(--shadow-soft) !important;
+  transition: transform var(--motion-fast) var(--easing-standard), border-color var(--motion-fast) var(--easing-standard), box-shadow var(--motion-fast) var(--easing-standard) !important;
+}
+
+.theme-light .markdown-preview-view table.table-view-table tr,
+.theme-light .markdown-preview-view :is(ul.dataview-list-ul, ul.dv-list, div[class*="dataview"] > ul) > li {
+  background: linear-gradient(155deg, rgba(var(--accent-rgb), 0.16) 0%, color-mix(in srgb, var(--background-primary) 95%, #fff 5%) 100%) !important;
+}
+
+.markdown-preview-view table.table-view-table tr:hover,
+.markdown-preview-view :is(ul.dataview-list-ul, ul.dv-list, div[class*="dataview"] > ul) > li:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--accent-250) 50%, var(--background-modifier-border) 50%) !important;
+  box-shadow: var(--shadow-mid) !important;
+}
+
+.markdown-preview-view table.table-view-table td {
+  width: 100%;
+  border: none !important;
+  background: transparent !important;
+  padding: 0.12rem 0 !important;
+}
+
+.markdown-preview-view .table-view-table > tbody > tr > td:first-child::before {
+  content: none !important;
+}
+
+.markdown-preview-view :is(ul.dataview-list-ul, ul.dv-list, div[class*="dataview"] > ul) {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 280px));
+  gap: 1rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+/* Graph view */
+.graph-view.color-circle,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight,
+.graph-view.color-fill-focused {
+  color: var(--accent-300) !important;
+  fill: var(--accent-300) !important;
+}
+
+.theme-dark .graph-view.color-arrow,
+.graph-view.color-line,
+.graph-view.color-text {
+  color: color-mix(in srgb, var(--accent-250) 48%, var(--text-secondary) 52%) !important;
+}
+
+.graph-view.color-fill-tag {
+  color: var(--support-yellow-500) !important;
+}
+
+.graph-view.color-fill-unresolved {
+  color: var(--support-red-500) !important;
+}
+
+.graph-view.color-fill-attachment {
+  color: var(--support-blue-500) !important;
+}
+
+/* Calendar plugin */
+#calendar-container {
+  --color-background-heading: transparent;
+  --color-background-weeknum: transparent;
+  --color-background-weekend: transparent;
+  --color-background-day: transparent;
+  --color-background-day-empty: var(--background-secondary-alt);
+  --color-background-day-empty: color-mix(in srgb, var(--background-secondary-alt) 86%, transparent);
+  --color-background-day-active: var(--accent-500);
+  --color-background-day-hover: rgba(var(--accent-rgb), 0.18);
+  --color-background-day-hover: color-mix(in srgb, var(--accent-450) 22%, var(--background-secondary-alt) 78%);
+
+  --color-text-title: var(--text-primary);
+  --color-text-heading: var(--text-secondary);
+  --color-text-weeknum: var(--text-muted);
+  --color-text-weeknum: color-mix(in srgb, var(--accent-250) 50%, var(--text-muted) 50%);
+  --color-text-day: var(--text-primary);
+  --color-text-today: var(--accent-350);
+
+  --color-dot: var(--accent-300);
+  --color-arrow: var(--accent-350);
+  --color-button: var(--text-muted);
+}
+
+#calendar-container .year {
+  color: var(--accent-300);
+}
+
+/* Popovers and embeds */
+.popover.hover-popover {
+  border: 1px solid color-mix(in srgb, var(--accent-300) 38%, var(--background-modifier-border) 62%);
+  box-shadow: var(--shadow-mid);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.popover.hover-popover .markdown-embed,
+.markdown-embed {
+  border-left: 2px solid color-mix(in srgb, var(--accent-400) 46%, transparent);
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+/* Block reference counter plugin */
+.block-ref-count {
+  border: 1px solid color-mix(in srgb, var(--accent-300) 38%, var(--background-modifier-border) 62%);
+  background: color-mix(in srgb, var(--background-secondary-alt) 82%, var(--accent-650) 18%);
+  color: var(--accent-250) !important;
+  border-radius: var(--radius-pill);
+  font-weight: var(--weight-semibold);
+}
+
+.block-ref-count:hover {
+  color: var(--accent-150) !important;
+  border-color: color-mix(in srgb, var(--accent-250) 52%, transparent);
+}
+
+/* Prominent star and common lucide accents */
+.lucide-bookmark {
+  color: var(--support-yellow-500);
+  fill: color-mix(in srgb, var(--support-yellow-500) 56%, transparent);
+}
+
+.lucide-hash {
+  color: var(--support-orange-500);
+}
+
+.lucide-calendar-check {
+  color: var(--support-red-500);
+}
+
+.lucide-search,
+.lucide-git-fork,
+.lucide-file {
+  color: var(--text-secondary);
+}
+
+/* Sliding panes header orientation compatibility */
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
+  text-orientation: sideways;
+}
+
+/* Language fence labels */
+pre[class*="language-"] {
+  padding-top: 1.6rem;
+  position: relative;
+}
+
+pre.language-javascript::before,
+pre.language-js::before,
+pre.language-typescript::before,
+pre.language-python::before,
+pre.language-css::before,
+pre.language-html::before,
+pre.language-bash::before,
+pre.language-info::before {
+  position: absolute;
+  top: 0.35rem;
+  left: 0.65rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-200);
+  opacity: 0.9;
+}
+
+pre.language-javascript::before,
+pre.language-js::before { content: "JavaScript"; }
+pre.language-typescript::before { content: "TypeScript"; }
+pre.language-python::before { content: "Python"; }
+pre.language-css::before { content: "CSS"; }
+pre.language-html::before { content: "HTML"; }
+pre.language-bash::before { content: "Shell"; }
+pre.language-info::before { content: "Info"; }

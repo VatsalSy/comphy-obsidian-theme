@@ -1,0 +1,251 @@
+/*
+ * CoMPhy Gruvbox 2.0
+ * Accent anchored to #68236D.
+ */
+
+:root {
+  /* Accent family (seed: #68236D) */
+  --accent-700: #431646;
+  --accent-650: #551b59;
+  --accent-600: #5f2064;
+  --accent-550: #66226a;
+  --accent-500: #68236d;
+  --accent-450: #7a3680;
+  --accent-400: #87408f;
+  --accent-350: #9a55a3;
+  --accent-300: #ae73b5;
+  --accent-250: #c69acc;
+  --accent-200: #d8b4dc;
+  --accent-150: #e7d2ea;
+  --accent-rgb: 104, 35, 109;
+
+  /* Supporting Gruvbox-adjacent accents */
+  --support-aqua-600: #5d8f87;
+  --support-aqua-500: #83a598;
+  --support-aqua-400: #9bc4bf;
+  --support-green-500: #8ec07c;
+  --support-olive-500: #b8bb26;
+  --support-yellow-500: #fabd2f;
+  --support-orange-500: #fe8019;
+  --support-blue-500: #7da8d8;
+  --support-red-500: #fb4934;
+
+  /* Neutral ramps */
+  --dark-0: #120f15;
+  --dark-1: #17131b;
+  --dark-2: #1e1a23;
+  --dark-3: #25202c;
+  --dark-4: #2f2937;
+  --dark-5: #3a3244;
+  --light-0: #fffdf9;
+  --light-1: #f8f4ef;
+  --light-2: #efe8e0;
+  --light-3: #dfd5cd;
+  --light-4: #cbbeb4;
+  --light-5: #9f8f84;
+
+  /* Typography */
+  --font-text: "Hack Nerd Font", "Hack", "JetBrains Mono", "Iosevka", monospace;
+  --font-mono: "Hack Nerd Font", "Hack", "JetBrains Mono", "Iosevka", monospace;
+  --font-display: "Alegreya Sans", "IBM Plex Sans", "Hack Nerd Font", sans-serif;
+
+  --font-size-ui: 13px;
+  --font-size-body: 16px;
+  --font-size-code: 0.92em;
+  --line-height-body: 1.6;
+
+  --h1-size: 2.05rem;
+  --h2-size: 1.68rem;
+  --h3-size: 1.44rem;
+  --h4-size: 1.28rem;
+  --h5-size: 1.12rem;
+  --h6-size: 1rem;
+
+  --weight-regular: 430;
+  --weight-medium: 520;
+  --weight-semibold: 620;
+  --weight-bold: 720;
+
+  /* Layout and effects */
+  --radius-xs: 4px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.14);
+  --shadow-mid: 0 6px 18px rgba(0, 0, 0, 0.2);
+
+  /* Transitions */
+  --motion-fast: 140ms;
+  --motion-medium: 220ms;
+  --easing-standard: cubic-bezier(0.2, 0, 0.2, 1);
+
+  /* Bucket presets for folder structure parity */
+  --bucket-underscore-bg: linear-gradient(140deg, #9bc4bf 0%, #89aaa5 56%, #8f6b98 100%);
+  --bucket-underscore-text: #141017;
+  --bucket-underscore-accent: #e3c55e;
+
+  --bucket-0-bg: linear-gradient(140deg, #9ebde2 0%, #869dcf 100%);
+  --bucket-0-text: #141017;
+  --bucket-0-accent: #b8cdf0;
+
+  --bucket-1-bg: linear-gradient(140deg, #93c39d 0%, #76a998 100%);
+  --bucket-1-text: #141017;
+  --bucket-1-accent: #b8dec0;
+
+  --bucket-2-bg: linear-gradient(140deg, #e3b96b 0%, #cd9336 100%);
+  --bucket-2-text: #141017;
+  --bucket-2-accent: #f2ce8d;
+
+  --bucket-3-bg: linear-gradient(140deg, #9b8777 0%, #786456 100%);
+  --bucket-3-text: #fcf8f2;
+  --bucket-3-accent: #b39a87;
+
+  --bucket-projects-bg: linear-gradient(140deg, #9d57a5 0%, #68236d 100%);
+  --bucket-projects-text: #fcf8f2;
+  --bucket-projects-accent: #d7b0dc;
+
+  --bucket-linkstubs-bg: linear-gradient(140deg, #8eb2a6 0%, #83a598 45%, #b16286 100%);
+  --bucket-linkstubs-text: #141017;
+  --bucket-linkstubs-accent: #fabd2f;
+}
+
+.theme-dark {
+  --surface-0: var(--dark-0);
+  --surface-1: var(--dark-1);
+  --surface-2: var(--dark-2);
+  --surface-3: var(--dark-3);
+  --surface-4: var(--dark-4);
+
+  --text-primary: #ece6de;
+  --text-secondary: #c8bdb2;
+  --text-muted: #ab9f95;
+  --text-faint: #8f8378;
+  --text-inverse: #18131d;
+
+  --border-subtle: rgba(232, 221, 210, 0.12);
+  --border-strong: rgba(232, 221, 210, 0.24);
+
+  --link-color: #8cb6e8;
+  --link-hover: #add2ff;
+  --heading-1: #b67abb;
+  --heading-2: #ecad4c;
+  --heading-3: #f0d38d;
+  --heading-4: #9ec88f;
+  --heading-5: #96c8c5;
+  --heading-6: #8db6e3;
+
+  --tag-text: #f5ebf4;
+  --selection-bg: rgba(var(--accent-rgb), 0.35);
+  --focus-ring: #c88bcf;
+
+  --panel-glow: radial-gradient(circle at 20% 0%, rgba(104, 35, 109, 0.3), transparent 46%);
+
+  /* Obsidian token mapping */
+  --font-interface: var(--font-text);
+  --font-monospace: var(--font-mono);
+
+  --background-primary: var(--surface-0);
+  --background-primary-alt: var(--surface-1);
+  --background-secondary: var(--surface-1);
+  --background-secondary-alt: var(--surface-2);
+
+  --text-normal: var(--text-primary);
+  --text-on-accent: var(--text-inverse);
+
+  --text-accent: var(--accent-300);
+  --text-accent-hover: var(--accent-200);
+  --text-selection: var(--selection-bg);
+
+  --interactive-accent: var(--accent-500);
+  --interactive-accent-hover: var(--accent-400);
+  --interactive-accent-rgb: var(--accent-rgb);
+
+  --background-modifier-border: var(--border-subtle);
+  --background-modifier-border-hover: var(--border-strong);
+  --background-modifier-active-hover: rgba(var(--accent-rgb), 0.16);
+  --background-modifier-hover: rgba(255, 255, 255, 0.04);
+
+  --pre-code: #1b1622;
+  --code-normal: #d6cde4;
+  --code-comment: #9f93ad;
+  --code-function: #8fd3ce;
+  --code-keyword: #d798df;
+
+  --blockquote-border-color: rgba(var(--accent-rgb), 0.7);
+  --blockquote-background-color: rgba(var(--accent-rgb), 0.08);
+}
+
+.theme-light {
+  --surface-0: #fffdf9;
+  --surface-1: #f8f4ef;
+  --surface-2: #efe8e0;
+  --surface-3: #e6ddd4;
+  --surface-4: #d7cbc0;
+
+  --text-primary: #2a2129;
+  --text-secondary: #4a3d48;
+  --text-muted: #665969;
+  --text-faint: #837489;
+  --text-inverse: #f9f5fd;
+
+  --border-subtle: rgba(42, 33, 41, 0.14);
+  --border-strong: rgba(42, 33, 41, 0.24);
+
+  --link-color: #5f3ea0;
+  --link-hover: #4f2f91;
+  --heading-1: #68236d;
+  --heading-2: #98581a;
+  --heading-3: #8f6b2d;
+  --heading-4: #4e7a45;
+  --heading-5: #2f7773;
+  --heading-6: #37638f;
+
+  --tag-text: #faf6fb;
+  --selection-bg: rgba(var(--accent-rgb), 0.2);
+  --focus-ring: #7e3883;
+
+  --panel-glow: radial-gradient(circle at 30% 0%, rgba(104, 35, 109, 0.11), transparent 52%);
+
+  /* Obsidian token mapping */
+  --font-interface: var(--font-text);
+  --font-monospace: var(--font-mono);
+
+  --background-primary: var(--surface-0);
+  --background-primary-alt: var(--surface-1);
+  --background-secondary: var(--surface-1);
+  --background-secondary-alt: var(--surface-2);
+
+  --text-normal: var(--text-primary);
+  --text-on-accent: var(--text-inverse);
+
+  --text-accent: var(--accent-550);
+  --text-accent-hover: var(--accent-600);
+  --text-selection: var(--selection-bg);
+
+  --interactive-accent: var(--accent-500);
+  --interactive-accent-hover: var(--accent-450);
+  --interactive-accent-rgb: var(--accent-rgb);
+
+  --background-modifier-border: var(--border-subtle);
+  --background-modifier-border-hover: var(--border-strong);
+  --background-modifier-active-hover: rgba(var(--accent-rgb), 0.11);
+  --background-modifier-hover: rgba(27, 19, 34, 0.04);
+
+  --pre-code: #f1eaf5;
+  --code-normal: #3b2b45;
+  --code-comment: #70617b;
+  --code-function: #226861;
+  --code-keyword: #7a2f81;
+
+  --blockquote-border-color: rgba(var(--accent-rgb), 0.56);
+  --blockquote-background-color: rgba(var(--accent-rgb), 0.1);
+}

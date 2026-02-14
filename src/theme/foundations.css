@@ -1,0 +1,196 @@
+/* Foundations: structure, typography, and rhythm. */
+
+html,
+body {
+  font-family: var(--font-text);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+}
+
+body {
+  background: var(--background-primary);
+}
+
+.app-container,
+.workspace,
+.workspace-split,
+.workspace-leaf,
+.workspace-leaf-content,
+.markdown-source-view,
+.markdown-reading-view,
+.markdown-preview-view,
+.cm-editor,
+.cm-scroller {
+  background: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.workspace-split.mod-root .workspace-leaf-content,
+.workspace-tabs,
+.workspace-tab-container {
+  background: linear-gradient(180deg, var(--background-primary) 0%, var(--background-primary-alt) 100%);
+}
+
+.workspace-leaf-resize-handle {
+  background-color: var(--background-modifier-border);
+}
+
+.workspace-leaf-resize-handle:hover,
+.workspace-leaf-resize-handle:active {
+  background-color: var(--accent-400);
+}
+
+.side-dock,
+.workspace-ribbon,
+.workspace-tab-header-container,
+.status-bar {
+  background:
+    var(--panel-glow),
+    linear-gradient(180deg, var(--background-secondary) 0%, var(--background-secondary-alt) 100%);
+  border-color: var(--background-modifier-border);
+}
+
+.workspace-leaf-header-title,
+.side-dock-title,
+.status-bar-item {
+  font-family: var(--font-display);
+  font-weight: var(--weight-medium);
+  color: var(--text-secondary);
+}
+
+.markdown-rendered,
+.markdown-source-view.mod-cm6 .cm-content,
+.cm-s-obsidian {
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: contextual;
+}
+
+.markdown-rendered p,
+.markdown-source-view.mod-cm6 .cm-line {
+  margin-block: var(--space-2);
+}
+
+.markdown-rendered strong,
+.cm-strong {
+  color: var(--accent-250);
+  color: color-mix(in srgb, var(--accent-250) 50%, var(--text-primary) 50%);
+  font-weight: var(--weight-semibold);
+}
+
+.markdown-rendered em,
+.cm-em {
+  color: var(--support-green-500);
+  color: color-mix(in srgb, var(--support-green-500) 46%, var(--text-primary) 54%);
+}
+
+.cm-header,
+.markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.cm-header-1,
+.markdown-rendered h1 {
+  color: var(--heading-1);
+  font-size: var(--h1-size);
+  font-weight: var(--weight-bold);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--heading-1);
+  border-bottom: 1px solid color-mix(in srgb, var(--heading-1) 34%, transparent);
+}
+
+.cm-header-2,
+.markdown-rendered h2 {
+  color: var(--heading-2);
+  font-size: var(--h2-size);
+  font-weight: var(--weight-semibold);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+}
+
+.cm-header-3,
+.markdown-rendered h3 {
+  color: var(--heading-3);
+  font-size: var(--h3-size);
+  font-weight: var(--weight-semibold);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
+}
+
+.cm-header-4,
+.markdown-rendered h4 {
+  color: var(--heading-4);
+  font-size: var(--h4-size);
+  font-weight: var(--weight-semibold);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.cm-header-5,
+.markdown-rendered h5 {
+  color: var(--heading-5);
+  font-size: var(--h5-size);
+  font-weight: var(--weight-medium);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-1);
+}
+
+.cm-header-6,
+.markdown-rendered h6 {
+  color: var(--heading-6);
+  font-size: var(--h6-size);
+  font-weight: var(--weight-medium);
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-1);
+}
+
+.markdown-rendered hr {
+  margin-block: calc(var(--space-6) * 1.6);
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(var(--accent-rgb), 0.3) 16%,
+    rgba(var(--accent-rgb), 0.5) 50%,
+    rgba(var(--accent-rgb), 0.3) 84%,
+    transparent 100%
+  );
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    color-mix(in srgb, var(--accent-350) 45%, transparent) 16%,
+    color-mix(in srgb, var(--accent-500) 68%, transparent) 50%,
+    color-mix(in srgb, var(--accent-350) 45%, transparent) 84%,
+    transparent 100%
+  );
+}
+
+.markdown-rendered :is(ul, ol) {
+  margin-block: var(--space-2);
+  padding-inline-start: 1.45rem;
+}
+
+.markdown-rendered ul > li::marker {
+  color: var(--accent-350);
+}
+
+.markdown-rendered ol > li::marker {
+  color: var(--support-orange-500);
+  font-weight: var(--weight-medium);
+}
+
+img,
+.markdown-rendered img {
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+}
+
+::selection,
+.cm-selectionBackground {
+  background: var(--selection-bg) !important;
+}

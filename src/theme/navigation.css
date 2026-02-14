@@ -1,0 +1,222 @@
+/*
+ * Navigation system
+ * - Preserves prior folder structure semantics.
+ * - Replaces legacy duplicated folder selectors.
+ */
+
+.nav-folder-title[data-path] {
+  background: var(--bucket-projects-bg);
+  color: var(--bucket-projects-text);
+  border-left: 3px solid var(--bucket-projects-accent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.13), 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.nav-folder-title[data-path] .nav-folder-collapse-indicator svg path {
+  fill: currentcolor;
+  stroke: currentcolor;
+}
+
+.nav-folder-title[data-path]:hover {
+  filter: brightness(1.03) saturate(1.03);
+  transform: translateX(1px);
+}
+
+.nav-folder-title[data-path].is-active,
+.nav-folder-title[data-path].is-active:hover {
+  filter: brightness(1.08) saturate(1.06);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+/* Structural buckets from existing workflow */
+.nav-folder-title[data-path^="_"] {
+  background: var(--bucket-underscore-bg);
+  color: var(--bucket-underscore-text);
+  border-left-color: var(--bucket-underscore-accent);
+}
+
+.nav-folder-title[data-path^="0-"] {
+  background: var(--bucket-0-bg);
+  color: var(--bucket-0-text);
+  border-left-color: var(--bucket-0-accent);
+}
+
+.nav-folder-title[data-path^="1-"] {
+  background: var(--bucket-1-bg);
+  color: var(--bucket-1-text);
+  border-left-color: var(--bucket-1-accent);
+}
+
+.nav-folder-title[data-path^="2-"] {
+  background: var(--bucket-2-bg);
+  color: var(--bucket-2-text);
+  border-left-color: var(--bucket-2-accent);
+}
+
+.nav-folder-title[data-path^="3-"],
+.nav-folder-title[data-path^="Z_Archive"] {
+  background: var(--bucket-3-bg);
+  color: var(--bucket-3-text);
+  border-left-color: var(--bucket-3-accent);
+}
+
+.nav-folder-title[data-path^="Projects"] {
+  background: var(--bucket-projects-bg);
+  color: var(--bucket-projects-text);
+  border-left-color: var(--bucket-projects-accent);
+}
+
+.nav-folder-title[data-path^="_LinkStubs"] {
+  background: var(--bucket-linkstubs-bg);
+  color: var(--bucket-linkstubs-text);
+  border-left-color: var(--bucket-linkstubs-accent);
+}
+
+/* Key bucket aliases preserved */
+.nav-folder-title[data-path^="Templates"] {
+  background: linear-gradient(140deg, #f39b3f 0%, #d17d2f 100%);
+  color: #191117;
+  border-left-color: #f3c17f;
+}
+
+.nav-folder-title[data-path^="_Inbox"] {
+  background: linear-gradient(140deg, #a89a8a 0%, #928374 100%);
+  color: #191117;
+  border-left-color: #d7c8b7;
+}
+
+.nav-folder-title[data-path^="_TODO"] {
+  background: linear-gradient(140deg, #9acb8b 0%, #7ea86f 100%);
+  color: #141017;
+  border-left-color: #cde8ba;
+}
+
+.nav-folder-title[data-path^="_AtomicNotes"] {
+  background: linear-gradient(140deg, #8fb1a3 0%, #83a598 100%);
+  color: #141017;
+  border-left-color: #cae3db;
+}
+
+.nav-folder-title[data-path^="_Media"] {
+  background: linear-gradient(140deg, #dfa4b4 0%, #ca8298 100%);
+  color: #141017;
+  border-left-color: #f1c2cf;
+}
+
+.nav-folder-title[data-path^="_LLM-Index"] {
+  background: linear-gradient(140deg, #c07497 0%, #9f4f76 100%);
+  color: #fff8ff;
+  border-left-color: #e0a4bf;
+}
+
+.nav-folder-title[data-path^="project-ideas"] {
+  background: linear-gradient(140deg, #fbd056 0%, #ddb03b 100%);
+  color: #1a1414;
+  border-left-color: #fee089;
+}
+
+.nav-folder-title[data-path^="documentationWeb"] {
+  background: linear-gradient(140deg, #e4ab4a 0%, #c68a30 100%);
+  color: #1a1414;
+  border-left-color: #f3ca7e;
+}
+
+.nav-folder-title[data-path^="comphy-search"] {
+  background: linear-gradient(140deg, #8eb2a6 0%, #7b9f93 100%);
+  color: #141017;
+  border-left-color: #c0ddd3;
+}
+
+/* Cross-vault naming variants */
+.nav-folder-title[data-path="Conference"],
+.nav-folder-title[data-path^="Conference/"],
+.nav-folder-title[data-path="conference"],
+.nav-folder-title[data-path^="conference/"],
+.nav-folder-title[data-path="conference-and-journal-club"],
+.nav-folder-title[data-path^="conference-and-journal-club/"] {
+  background: linear-gradient(140deg, #a4d2ff 0%, #83a598 100%);
+  color: #141017;
+  border-left-color: #d4e9ff;
+}
+
+.nav-folder-title[data-path="Readwise"],
+.nav-folder-title[data-path^="Readwise/"],
+.nav-folder-title[data-path="readwise"],
+.nav-folder-title[data-path^="readwise/"],
+.nav-folder-title[data-path^="_ReadWise"] {
+  background: linear-gradient(140deg, #c578d0 0%, #9f56aa 100%);
+  color: #fff8ff;
+  border-left-color: #e4b6ea;
+}
+
+.nav-folder-title[data-path="Scripts"],
+.nav-folder-title[data-path^="Scripts/"],
+.nav-folder-title[data-path="scripts"],
+.nav-folder-title[data-path^="scripts/"],
+.nav-folder-title[data-path^="_scripts"] {
+  background: linear-gradient(140deg, #c7ca43 0%, #9ea223 100%);
+  color: #141017;
+  border-left-color: #e9eb89;
+}
+
+/* Simplified icon language */
+.nav-folder-title-content::before,
+.nav-file-title-content::before {
+  display: inline-block;
+  width: 1.25rem;
+  margin-right: 0.25rem;
+  text-align: center;
+}
+
+.nav-folder-title-content::before {
+  content: "📁";
+}
+
+.nav-file-title-content::before {
+  content: "•";
+  color: var(--accent-250);
+  color: color-mix(in srgb, var(--accent-250) 72%, var(--text-muted) 28%);
+  font-size: 0.95em;
+}
+
+.nav-folder-title[data-path^="Projects"] .nav-folder-title-content::before { content: "🚀"; }
+.nav-folder-title[data-path^="_Inbox"] .nav-folder-title-content::before { content: "📥"; }
+.nav-folder-title[data-path^="_TODO"] .nav-folder-title-content::before { content: "✅"; }
+.nav-folder-title[data-path^="_LLM-Index"] .nav-folder-title-content::before { content: "🤖"; }
+.nav-folder-title[data-path^="_LinkStubs"] .nav-folder-title-content::before { content: "🔗"; }
+.nav-folder-title[data-path^="Templates"] .nav-folder-title-content::before { content: "📋"; }
+.nav-folder-title[data-path^="Z_Archive"] .nav-folder-title-content::before,
+.nav-folder-title[data-path^="3-"] .nav-folder-title-content::before { content: "📦"; }
+.nav-folder-title[data-path^="project-ideas"] .nav-folder-title-content::before { content: "💡"; }
+.nav-folder-title[data-path^="documentationWeb"] .nav-folder-title-content::before { content: "📚"; }
+.nav-folder-title[data-path^="comphy-search"] .nav-folder-title-content::before { content: "🔬"; }
+.nav-folder-title[data-path="Conference"] .nav-folder-title-content::before,
+.nav-folder-title[data-path^="Conference/"] .nav-folder-title-content::before,
+.nav-folder-title[data-path="conference"] .nav-folder-title-content::before,
+.nav-folder-title[data-path^="conference/"] .nav-folder-title-content::before,
+.nav-folder-title[data-path="conference-and-journal-club"] .nav-folder-title-content::before,
+.nav-folder-title[data-path^="conference-and-journal-club/"] .nav-folder-title-content::before { content: "🎓"; }
+.nav-folder-title[data-path="Readwise"] .nav-folder-title-content::before,
+.nav-folder-title[data-path^="Readwise/"] .nav-folder-title-content::before,
+.nav-folder-title[data-path="readwise"] .nav-folder-title-content::before,
+.nav-folder-title[data-path^="readwise/"] .nav-folder-title-content::before,
+.nav-folder-title[data-path^="_ReadWise"] .nav-folder-title-content::before { content: "📚"; }
+.nav-folder-title[data-path="Scripts"] .nav-folder-title-content::before,
+.nav-folder-title[data-path^="Scripts/"] .nav-folder-title-content::before,
+.nav-folder-title[data-path="scripts"] .nav-folder-title-content::before,
+.nav-folder-title[data-path^="scripts/"] .nav-folder-title-content::before,
+.nav-folder-title[data-path^="_scripts"] .nav-folder-title-content::before { content: "📜"; }
+
+/* File-type semantics */
+.nav-file-title[data-path$=".md"] .nav-file-title-content::before { content: "📝"; }
+.nav-file-title[data-path$=".canvas"] .nav-file-title-content::before { content: "🎨"; }
+.nav-file-title[data-path$=".pdf"] .nav-file-title-content::before { content: "📄"; }
+.nav-file-title[data-path$=".png"] .nav-file-title-content::before,
+.nav-file-title[data-path$=".jpg"] .nav-file-title-content::before,
+.nav-file-title[data-path$=".jpeg"] .nav-file-title-content::before,
+.nav-file-title[data-path$=".webp"] .nav-file-title-content::before,
+.nav-file-title[data-path$=".svg"] .nav-file-title-content::before { content: "🖼"; }
+.nav-file-title[data-path$=".css"] .nav-file-title-content::before,
+.nav-file-title[data-path$=".js"] .nav-file-title-content::before,
+.nav-file-title[data-path$=".ts"] .nav-file-title-content::before,
+.nav-file-title[data-path$=".py"] .nav-file-title-content::before,
+.nav-file-title[data-path$=".sh"] .nav-file-title-content::before { content: "⌘"; }
