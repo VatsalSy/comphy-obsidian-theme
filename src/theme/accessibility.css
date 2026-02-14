@@ -1,0 +1,88 @@
+/* Accessibility and motion controls. */
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring) !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.24);
+}
+
+button:focus-visible,
+.clickable-icon:focus-visible,
+.nav-file-title:focus-visible,
+.nav-folder-title:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  border-color: var(--focus-ring) !important;
+  border-color: color-mix(in srgb, var(--focus-ring) 55%, var(--background-modifier-border) 45%) !important;
+}
+
+.mod-left-split .workspace-tabs .workspace-tab-header.is-active,
+.mod-right-split .workspace-tabs .workspace-tab-header.is-active,
+.workspace-tab-header.is-active {
+  color: var(--accent-250);
+  border-color: var(--accent-350);
+  border-color: color-mix(in srgb, var(--accent-350) 40%, transparent);
+  background: var(--background-secondary-alt);
+  background: color-mix(in srgb, var(--accent-650) 16%, var(--background-secondary) 84%);
+}
+
+.theme-light .mod-left-split .workspace-tabs .workspace-tab-header.is-active,
+.theme-light .mod-right-split .workspace-tabs .workspace-tab-header.is-active,
+.theme-light .workspace-tab-header.is-active {
+  background: var(--accent-150);
+  background: color-mix(in srgb, var(--accent-150) 56%, var(--background-secondary) 44%);
+  color: var(--accent-600);
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active,
+.workspace-leaf.mod-active .workspace-leaf-header-title {
+  color: var(--accent-200);
+  color: color-mix(in srgb, var(--accent-200) 74%, var(--text-primary) 26%);
+}
+
+.status-bar-item.plugin-editor-status {
+  color: var(--accent-300);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  :root {
+    --background-primary: #ffffff;
+    --background-secondary: #ffffff;
+    --background-secondary-alt: #f4f4f4;
+    --text-primary: #000000;
+    --text-secondary: #111111;
+    --text-muted: #222222;
+    --background-modifier-border: #cccccc;
+  }
+
+  body,
+  .markdown-preview-view {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  h2 {
+    page-break-before: always;
+  }
+
+  h3,
+  h4,
+  pre,
+  blockquote,
+  table {
+    page-break-inside: avoid;
+  }
+}
