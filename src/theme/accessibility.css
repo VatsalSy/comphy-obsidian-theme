@@ -35,6 +35,11 @@ textarea:focus-visible {
   color: var(--accent-600);
 }
 
+/* Remove distracting purple border around active editor pane */
+.workspace .mod-root .workspace-leaf.mod-active {
+  border-color: transparent;
+}
+
 .nav-file-title.is-active,
 .workspace-leaf.mod-active .workspace-leaf-header-title {
   color: var(--accent-200);
