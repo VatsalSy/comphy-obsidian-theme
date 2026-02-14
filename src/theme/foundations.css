@@ -74,14 +74,14 @@ body {
 .markdown-rendered strong,
 .cm-strong {
   color: var(--accent-250);
-  color: color-mix(in srgb, var(--accent-250) 50%, var(--text-primary) 50%);
+  color: color-mix(in srgb, var(--accent-250) 65%, var(--text-primary) 35%);
   font-weight: var(--weight-semibold);
 }
 
 .markdown-rendered em,
 .cm-em {
   color: var(--support-green-500);
-  color: color-mix(in srgb, var(--support-green-500) 46%, var(--text-primary) 54%);
+  color: color-mix(in srgb, var(--support-green-500) 62%, var(--text-primary) 38%);
 }
 
 .cm-header,
@@ -151,7 +151,7 @@ body {
 .markdown-rendered hr {
   margin-block: calc(var(--space-6) * 1.6);
   border: 0;
-  height: 1px;
+  height: 2px;
   background-image: linear-gradient(
     to right,
     transparent 0%,
@@ -163,9 +163,9 @@ body {
   background-image: linear-gradient(
     to right,
     transparent 0%,
-    color-mix(in srgb, var(--accent-350) 45%, transparent) 16%,
-    color-mix(in srgb, var(--accent-500) 68%, transparent) 50%,
-    color-mix(in srgb, var(--accent-350) 45%, transparent) 84%,
+    color-mix(in srgb, var(--accent-350) 60%, transparent) 16%,
+    color-mix(in srgb, var(--accent-500) 85%, transparent) 50%,
+    color-mix(in srgb, var(--accent-350) 60%, transparent) 84%,
     transparent 100%
   );
 }
