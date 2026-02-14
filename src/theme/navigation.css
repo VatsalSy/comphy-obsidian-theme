@@ -12,8 +12,8 @@
 }
 
 .nav-folder-title[data-path] .nav-folder-collapse-indicator svg path {
-  fill: currentColor;
-  stroke: currentColor;
+  fill: currentcolor;
+  stroke: currentcolor;
 }
 
 .nav-folder-title[data-path]:hover {

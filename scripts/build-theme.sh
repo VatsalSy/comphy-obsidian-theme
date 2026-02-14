@@ -14,7 +14,12 @@ parts=(
   "accessibility.css"
 )
 
-tmp_file="$(mktemp)"
+tmp_dir="$(dirname "$OUT_FILE")"
+tmp_file="$(mktemp "$tmp_dir/.theme.css.tmp.XXXXXX")"
+cleanup() {
+  rm -f "$tmp_file"
+}
+trap cleanup EXIT INT TERM
 existing_mode=""
 
 if [[ -e "$OUT_FILE" ]]; then

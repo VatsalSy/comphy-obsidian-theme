@@ -36,7 +36,6 @@ textarea:focus-visible {
 }
 
 .nav-file-title.is-active,
-.nav-folder-title.is-active,
 .workspace-leaf.mod-active .workspace-leaf-header-title {
   color: var(--accent-200);
   color: color-mix(in srgb, var(--accent-200) 74%, var(--text-primary) 26%);
@@ -75,7 +74,7 @@ textarea:focus-visible {
   }
 
   h2 {
-    page-break-before: always;
+    break-before: page;
   }
 
   h3,
@@ -83,6 +82,6 @@ textarea:focus-visible {
   pre,
   blockquote,
   table {
-    page-break-inside: avoid;
+    break-inside: avoid;
   }
 }

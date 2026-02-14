@@ -2,9 +2,7 @@
 
 /* Dataview table as cards */
 .markdown-preview-view table.table-view-table {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 280px));
-  gap: 1rem !important;
+  display: block !important;
   border: none !important;
   background: transparent !important;
   width: 100% !important;
@@ -15,7 +13,9 @@
 }
 
 .markdown-preview-view table.table-view-table tbody {
-  display: contents !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 280px));
+  gap: 1rem !important;
 }
 
 .markdown-preview-view table.table-view-table tr,
@@ -99,12 +99,15 @@
   --color-background-weeknum: transparent;
   --color-background-weekend: transparent;
   --color-background-day: transparent;
+  --color-background-day-empty: var(--background-secondary-alt);
   --color-background-day-empty: color-mix(in srgb, var(--background-secondary-alt) 86%, transparent);
   --color-background-day-active: var(--accent-500);
+  --color-background-day-hover: rgba(var(--accent-rgb), 0.18);
   --color-background-day-hover: color-mix(in srgb, var(--accent-450) 22%, var(--background-secondary-alt) 78%);
 
   --color-text-title: var(--text-primary);
   --color-text-heading: var(--text-secondary);
+  --color-text-weeknum: var(--text-muted);
   --color-text-weeknum: color-mix(in srgb, var(--accent-250) 50%, var(--text-muted) 50%);
   --color-text-day: var(--text-primary);
   --color-text-today: var(--accent-350);

@@ -19,16 +19,19 @@ See `MIGRATION.md` for deprecated legacy selectors and mapping guidance.
 ## Features
 
 ### Accent and Color System
+
 - Purple accent family anchored to `#68236D`.
 - Dark and light mode parity using semantic tokens.
 - Controlled gradients and contrast-tuned surfaces.
 
 ### Typography
+
 - Hack Nerd Font baseline (with clean fallbacks).
 - Clear heading hierarchy (`h1` to `h6`) with improved rhythm.
 - Improved readability for code-heavy and research-heavy notes.
 
 ### Navigation and Folder Semantics
+
 - Preserves structural groups used in existing vaults:
   - `_...`
   - `0-...`, `1-...`, `2-...`, `3-...`
@@ -36,6 +39,7 @@ See `MIGRATION.md` for deprecated legacy selectors and mapping guidance.
 - Simplified icon language to reduce visual noise.
 
 ### Plugin Coverage
+
 - Dataview card layouts (table + list patterns)
 - Calendar plugin variable theming
 - Graph view color harmonization
@@ -44,12 +48,14 @@ See `MIGRATION.md` for deprecated legacy selectors and mapping guidance.
 ## Installation
 
 ### From Community Themes
+
 1. Open Obsidian Settings.
 2. Go to **Appearance** -> **Themes**.
 3. Click **Manage** and search for `CoMPhy Gruvbox`.
 4. Click **Install and use**.
 
 ### Manual Installation
+
 1. Download `theme.css` and `manifest.json`.
 2. Create `.obsidian/themes/CoMPhy Gruvbox/` in your vault.
 3. Copy `theme.css` and `manifest.json` into that folder.
