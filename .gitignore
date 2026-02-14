@@ -14,6 +14,4 @@ Thumbs.db
 
 # Obsidian
 data.json
-
-# Demo vault for screenshots (local only)
-demo-vault/
+demo-vault/.obsidian/

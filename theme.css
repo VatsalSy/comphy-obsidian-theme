@@ -447,10 +447,14 @@ img {
   background-color: var(--dark0-hard);
 }
 
-.cm-s-obsidian,
-.markdown-preview-view {
+.theme-dark .cm-s-obsidian,
+.theme-dark .markdown-preview-view {
   --background-primary: var(--dark0);
   --background-secondary: var(--dark0-hard);
+}
+
+.cm-s-obsidian,
+.markdown-preview-view {
   color: var(--text-normal);
   /* padding-left: 10px !important; */
   padding-right: 10px !important;
@@ -810,11 +814,11 @@ ul ul ul li:not(.task-list-item)::before {
 }
 
 .nav-folder-title[data-path^='Projects'] {
-  background-color: #83a598;  /* soft blue */
-  color: var(--background-primary);
+  background: linear-gradient(135deg, var(--accent-purple-light) 0%, var(--accent-purple) 100%);
+  color: var(--light0);
 }
 .nav-folder-title[data-path^='Projects'] .nav-folder-title-content::before {
-  content: "🎯 ";
+  content: "🚀 ";
 }
 
 .nav-folder-title[data-path^='2-'] {
@@ -1729,11 +1733,11 @@ span.cm-inline-code + span.cm-formatting.cm-formatting-code.cm-inline-code {
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Projects'] {
-  background-color: var(--bright-blue);  /* or --neutral-aqua or --faded-yellow */
-  color: var(--background-primary);
+  background: linear-gradient(135deg, var(--accent-purple-light) 0%, var(--accent-purple) 100%);
+  color: var(--light0);
 }
 .nav-folder-title[data-path^='otv'] {
-  background-color: var(--b8bb26);  /* or --neutral-aqua or --faded-yellow */
+  background: linear-gradient(135deg, #b7cc9a 0%, var(--bright-green) 100%);
   color: var(--background-primary);
 }
 
@@ -1895,7 +1899,7 @@ a.tag:hover {
 /* Special styling for important folders using accent color */
 .nav-folder-title[data-path^='Projects'] {
   background-color: var(--accent-purple);
-  color: var(--background-primary);
+  color: var(--light0);
 }
 
 .nav-folder-title[data-path^='Projects'] .nav-folder-title-content::before {
@@ -2224,16 +2228,16 @@ div.oz-folder-contents {
   color: var(--bright-aqua);
 }
 
-/** Folder Colors and Emojis */
+/** Folder Colors and Emojis - subtle gradients */
 .nav-folder-title[data-path^='_AtomicNotes'] {
-  background-color: #83a598;  /* soft blue */
+  background: linear-gradient(135deg, #8fb1a3 0%, #83a598 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='_AtomicNotes'] .nav-folder-title-content::before {
   content: "📝 ";
 }
 .nav-folder-title[data-path^='_Inbox'] {
-  background-color: #928374;  /* soft gray */
+  background: linear-gradient(135deg, #a89a8a 0%, #928374 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='_Inbox'] .nav-folder-title-content::before {
@@ -2241,7 +2245,7 @@ div.oz-folder-contents {
 }
 
 .nav-folder-title[data-path^='_Media'] {
-  background-color: #d3869b;  /* soft pink */
+  background: linear-gradient(135deg, #dfa4b4 0%, #d3869b 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='_Media'] .nav-folder-title-content::before {
@@ -2249,7 +2253,7 @@ div.oz-folder-contents {
 }
 
 .nav-folder-title[data-path^='_TODO'] {
-  background-color: #8ec07c;  /* soft green */
+  background: linear-gradient(135deg, #9acb8b 0%, #8ec07c 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='_TODO'] .nav-folder-title-content::before {
@@ -2257,7 +2261,7 @@ div.oz-folder-contents {
 }
 
 .nav-folder-title[data-path^='_LLM-Index'] {
-  background-color: #b16286;  /* soft purple/magenta - AI/LLM theme */
+  background: linear-gradient(135deg, #c07497 0%, #b16286 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='_LLM-Index'] .nav-folder-title-content::before {
@@ -2265,7 +2269,7 @@ div.oz-folder-contents {
 }
 
 .nav-folder-title[data-path^='Clippings'] {
-  background-color: #b8bb26;  /* soft yellow */
+  background: linear-gradient(135deg, #c8cc43 0%, #b8bb26 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Clippings'] .nav-folder-title-content::before {
@@ -2273,15 +2277,15 @@ div.oz-folder-contents {
 }
 
 .nav-folder-title[data-path^='Projects'] {
-  background-color: #83a598;  /* soft blue */
-  color: var(--background-primary);
+  background: linear-gradient(135deg, var(--accent-purple-light) 0%, var(--accent-purple) 100%);
+  color: var(--light0);
 }
 .nav-folder-title[data-path^='Projects'] .nav-folder-title-content::before {
-  content: "🎯 ";
+  content: "🚀 ";
 }
 
 .nav-folder-title[data-path^='2-'] {
-  background-color: #d79921;  /* muted orange */
+  background: linear-gradient(135deg, #e4ab4a 0%, #d79921 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='2-'] .nav-folder-title-content::before {
@@ -2289,7 +2293,7 @@ div.oz-folder-contents {
 }
 
 .nav-folder-title[data-path^='Templates'] {
-  background-color: var(--neutral-orange);
+  background: linear-gradient(135deg, #f39b3f 0%, var(--neutral-orange) 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Templates'] .nav-folder-title-content::before {
@@ -2297,16 +2301,16 @@ div.oz-folder-contents {
 }
 
 .nav-folder-title[data-path^='Z_Archive'] {
-  background-color: #7c6f64;  /* soft brown */
-  color: var(--background-primary);
+  background: linear-gradient(135deg, #8a7e72 0%, #7c6f64 100%);
+  color: var(--light0);
 }
 .nav-folder-title[data-path^='Z_Archive'] .nav-folder-title-content::before {
   content: "📦 ";
 }
 /* Match 3-* to Z_Archive appearance */
 .nav-folder-title[data-path^='3-'] {
-  background-color: #7c6f64;  /* soft brown */
-  color: var(--background-primary);
+  background: linear-gradient(135deg, #8a7e72 0%, #7c6f64 100%);
+  color: var(--light0);
 }
 .nav-folder-title[data-path^='3-'] .nav-folder-title-content::before {
   content: "📦 ";
@@ -2316,7 +2320,7 @@ div.oz-folder-contents {
  * COMPHY SEARCH FOLDER
  *---------------------------------*/
 .nav-folder-title[data-path^='comphy-search'] {
-  background-color: #83a598;  /* soft blue */
+  background: linear-gradient(135deg, #8eb2a6 0%, #83a598 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='comphy-search'] .nav-folder-title-content::before {
@@ -2327,7 +2331,7 @@ div.oz-folder-contents {
  * DOCUMENTATION WEB FOLDER
  *---------------------------------*/
 .nav-folder-title[data-path^='documentationWeb'] {
-  background-color: #d79921;  /* muted orange */
+  background: linear-gradient(135deg, #e4ab4a 0%, #d79921 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='documentationWeb'] .nav-folder-title-content::before {
@@ -2338,7 +2342,7 @@ div.oz-folder-contents {
  * PROJECT IDEAS FOLDER
  *---------------------------------*/
 .nav-folder-title[data-path^='project-ideas'] {
-  background-color: #fabd2f;  /* yellow highlight */
+  background: linear-gradient(135deg, #fbd056 0%, #fabd2f 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='project-ideas'] .nav-folder-title-content::before {
@@ -2356,7 +2360,7 @@ div.oz-folder-contents {
     background-color: var(--neutral-green) !important;
 }
 .nav-folder-title[data-path^='comphy-lab.github.io'] {
-  background-color: #83a598;  /* soft blue for code/research */
+  background: linear-gradient(135deg, #8eb2a6 0%, #83a598 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='comphy-lab.github.io'] .nav-folder-title-content::before {
@@ -2364,7 +2368,7 @@ div.oz-folder-contents {
 }
 
 .nav-folder-title[data-path^='Conference-club'] {
-  background-color: #8ec07c;  /* soft green for literature */
+  background: linear-gradient(135deg, #9acb8b 0%, #8ec07c 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Conference-club'] .nav-folder-title-content::before {
@@ -2372,7 +2376,7 @@ div.oz-folder-contents {
 }
 
 .nav-folder-title[data-path^='Journal-club'] {
-  background-color: #689d6a;  /* aqua - better contrast than red */
+  background: linear-gradient(135deg, #79ab7d 0%, #689d6a 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Journal-club'] .nav-folder-title-content::before {
@@ -2380,7 +2384,7 @@ div.oz-folder-contents {
 }
 
 .nav-folder-title[data-path^='Templates'] {
-  background-color: #928374;  /* soft gray for templates */
+  background: linear-gradient(135deg, #f39b3f 0%, var(--neutral-orange) 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Templates'] .nav-folder-title-content::before {
@@ -2389,116 +2393,370 @@ div.oz-folder-contents {
 
 /** Folder colors Source: https://gist.github.com/Larandar/e025313d086b75ec1f9a2e6672836883 */
 .nav-folder-title[data-path^='Log'] {
-  background-color: var(--durham-purple);
-  color: var(--background-primary);
+  background: linear-gradient(135deg, var(--accent-purple-light) 0%, var(--accent-purple) 100%);
+  color: var(--light0);
 }
 .nav-folder-title[data-path^='Journal'] {
-  background-color: var(--durham-purple);
-  color: var(--background-primary);
+  background: linear-gradient(135deg, var(--accent-purple-light) 0%, var(--accent-purple) 100%);
+  color: var(--light0);
 }
 .nav-folder-title[data-path^='Sterkere'] {
-  background-color: var(--durham-purple);
-  color: var(--background-primary);
+  background: linear-gradient(135deg, var(--accent-purple-light) 0%, var(--accent-purple) 100%);
+  color: var(--light0);
 }
 .nav-folder-title[data-path^='Templates'] {
-  background-color: var(--neutral-orange);
+  background: linear-gradient(135deg, #f39b3f 0%, var(--neutral-orange) 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='DevLog'] {
-  background-color: var(--neutral-yellow);
+  background: linear-gradient(135deg, #f2d29b 0%, var(--neutral-yellow) 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='CRM'] {
-  background-color: var(--neutral-green);
+  background: linear-gradient(135deg, #b7d1a5 0%, var(--neutral-green) 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Inbox'] {
-  background-color: var(--neutral-aqua);
+  background: linear-gradient(135deg, #9bdedb 0%, var(--neutral-aqua) 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Z'] {
-  background-color: var(--neutral-aqua);
+  background: linear-gradient(135deg, #9bdedb 0%, var(--neutral-aqua) 100%);
   color: var(--background-primary);
 }
 .nav-folder.mod-root
     > .nav-folder-children
     > .nav-folder
     > .nav-folder-title[data-path^='People'] {
-  background-color: var(--neutral-blue);
+  background: linear-gradient(135deg, #a4d2ff 0%, var(--neutral-blue) 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Media'] {
-  background-color: var(--neutral-blue);
+  background: linear-gradient(135deg, #a4d2ff 0%, var(--neutral-blue) 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Notes'] {
-  background-color: var(--neutral-purple);
+  background: linear-gradient(135deg, #c578d0 0%, var(--neutral-purple) 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Readwise'] {
-  background-color: var(--neutral-purple);
+  background: linear-gradient(135deg, #c578d0 0%, var(--neutral-purple) 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Utility'] {
-  background-color: var(--gray);
+  background: linear-gradient(135deg, #d8d8d8 0%, var(--gray) 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Projects'] {
-  background-color: var(--bright-blue);  /* or --neutral-aqua or --faded-yellow */
-  color: var(--background-primary);
+  background: linear-gradient(135deg, var(--accent-purple-light) 0%, var(--accent-purple) 100%);
+  color: var(--light0);
 }
 .nav-folder-title[data-path^='otv'] {
-  background-color: var(--b8bb26);  /* or --neutral-aqua or --faded-yellow */
+  background: linear-gradient(135deg, #b7cc9a 0%, var(--bright-green) 100%);
   color: var(--background-primary);
 }
 
 /* Custom folder icons and colors for additional folders */
 .nav-folder-title[data-path^='_scripts'] {
-  color: #b8bb26;
+  background: linear-gradient(135deg, #c7ca43 0%, #b8bb26 100%);
+  color: var(--background-primary);
 }
 .nav-folder-title[data-path^='_scripts'] .nav-folder-title-content::before {
   content: "📜 "; font-size: 1.3em;
 }
 
 .nav-folder-title[data-path^='Blog'] {
-  color: #fabd2f;
+  background: linear-gradient(135deg, #fbd35f 0%, #fabd2f 100%);
+  color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Blog'] .nav-folder-title-content::before {
   content: "✍️ "; font-size: 1.3em;
 }
 
 .nav-folder-title[data-path^='Code-Documentation'] {
-  color: #83a598;
+  background: linear-gradient(135deg, #8eb2a6 0%, #83a598 100%);
+  color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Code-Documentation'] .nav-folder-title-content::before {
   content: "📘 "; font-size: 1.3em;
 }
 
 .nav-folder-title[data-path^='Lecture-Notes'] {
-  color: #d3869b;
+  background: linear-gradient(135deg, #dfa4b4 0%, #d3869b 100%);
+  color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Lecture-Notes'] .nav-folder-title-content::before {
   content: "📝 "; font-size: 1.3em;
 }
 
 .nav-folder-title[data-path^='Talks'] {
-  color: #fe8019;
+  background: linear-gradient(135deg, #ff9a4b 0%, #fe8019 100%);
+  color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Talks'] .nav-folder-title-content::before {
   content: "🎤 "; font-size: 1.3em;
 }
 
 .nav-folder-title[data-path^='Wish-List'] {
-  color: #8ec07c;
+  background: linear-gradient(135deg, #9acb8b 0%, #8ec07c 100%);
+  color: var(--background-primary);
 }
 .nav-folder-title[data-path^='Wish-List'] .nav-folder-title-content::before {
   content: "✨ "; font-size: 1.3em;
 }
 
 .nav-folder-title[data-path^='_ReadWise'] {
-  background-color: #689d6a;  /* aqua from Gruvbox palette */
+  background: linear-gradient(135deg, #79ab7d 0%, #689d6a 100%);
   color: var(--background-primary);
 }
 .nav-folder-title[data-path^='_ReadWise'] .nav-folder-title-content::before {
   content: "📚 "; font-size: 1.3em;
+}
+
+/* Link stubs blend note, task, and AI index tones */
+.nav-folder-title[data-path^='_LinkStubs'] {
+  background: linear-gradient(135deg, #8eb2a6 0%, #83a598 45%, #b16286 100%);
+  color: var(--background-primary);
+  border-left: 3px solid #fabd2f;
+}
+.nav-folder-title[data-path^='_LinkStubs'] .nav-folder-title-content::before {
+  content: "🔗 "; font-size: 1.3em;
+}
+
+/* Folder name aliases to ensure styling applies across naming variants */
+.nav-folder-title[data-path='Conference'],
+.nav-folder-title[data-path^='Conference/'],
+.nav-folder-title[data-path$='/Conference'],
+.nav-folder-title[data-path*='/Conference/'] {
+  background: linear-gradient(135deg, #a4d2ff 0%, #83a598 100%);
+  color: var(--background-primary);
+}
+.nav-folder-title[data-path='Conference'] .nav-folder-title-content::before,
+.nav-folder-title[data-path^='Conference/'] .nav-folder-title-content::before,
+.nav-folder-title[data-path$='/Conference'] .nav-folder-title-content::before,
+.nav-folder-title[data-path*='/Conference/'] .nav-folder-title-content::before {
+  content: "🎓 "; font-size: 1.3em;
+}
+
+.nav-folder-title[data-path='Readwise'],
+.nav-folder-title[data-path^='Readwise/'],
+.nav-folder-title[data-path='readwise'],
+.nav-folder-title[data-path^='readwise/'],
+.nav-folder-title[data-path$='/Readwise'],
+.nav-folder-title[data-path*='/Readwise/'],
+.nav-folder-title[data-path$='/readwise'],
+.nav-folder-title[data-path*='/readwise/'] {
+  background: linear-gradient(135deg, #c578d0 0%, var(--neutral-purple) 100%);
+  color: var(--background-primary);
+}
+.nav-folder-title[data-path='Readwise'] .nav-folder-title-content::before,
+.nav-folder-title[data-path^='Readwise/'] .nav-folder-title-content::before,
+.nav-folder-title[data-path='readwise'] .nav-folder-title-content::before,
+.nav-folder-title[data-path^='readwise/'] .nav-folder-title-content::before,
+.nav-folder-title[data-path$='/Readwise'] .nav-folder-title-content::before,
+.nav-folder-title[data-path*='/Readwise/'] .nav-folder-title-content::before,
+.nav-folder-title[data-path$='/readwise'] .nav-folder-title-content::before,
+.nav-folder-title[data-path*='/readwise/'] .nav-folder-title-content::before {
+  content: "📚 "; font-size: 1.3em;
+}
+
+.nav-folder-title[data-path='Scripts'],
+.nav-folder-title[data-path^='Scripts/'],
+.nav-folder-title[data-path='scripts'],
+.nav-folder-title[data-path^='scripts/'],
+.nav-folder-title[data-path$='/Scripts'],
+.nav-folder-title[data-path*='/Scripts/'],
+.nav-folder-title[data-path$='/scripts'],
+.nav-folder-title[data-path*='/scripts/'] {
+  background: linear-gradient(135deg, #c7ca43 0%, #b8bb26 100%);
+  color: var(--background-primary);
+}
+.nav-folder-title[data-path='Scripts'] .nav-folder-title-content::before,
+.nav-folder-title[data-path^='Scripts/'] .nav-folder-title-content::before,
+.nav-folder-title[data-path='scripts'] .nav-folder-title-content::before,
+.nav-folder-title[data-path^='scripts/'] .nav-folder-title-content::before,
+.nav-folder-title[data-path$='/Scripts'] .nav-folder-title-content::before,
+.nav-folder-title[data-path*='/Scripts/'] .nav-folder-title-content::before,
+.nav-folder-title[data-path$='/scripts'] .nav-folder-title-content::before,
+.nav-folder-title[data-path*='/scripts/'] .nav-folder-title-content::before {
+  content: "📜 "; font-size: 1.3em;
+}
+
+/* ==========================================================================
+ * Unified Folder Gradient System (authoritative, dark-first)
+ * Accent anchored to #68236D
+ * ========================================================================== */
+.nav-folder-title[data-path] {
+  background: linear-gradient(135deg, #87408f 0%, #68236d 100%) !important;
+  color: var(--light0) !important;
+  border-left: 3px solid #af69b8 !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 1px 3px rgba(0, 0, 0, 0.22);
+  transition: filter 0.18s ease, transform 0.18s ease;
+}
+
+.nav-folder-title[data-path]:hover {
+  filter: brightness(1.04) saturate(1.04);
+  transform: translateX(1px);
+}
+
+.nav-folder-title[data-path].is-active,
+.nav-folder-title[data-path].is-active:hover {
+  filter: brightness(1.08) saturate(1.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-folder-title[data-path] .nav-folder-collapse-indicator svg path {
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/* _XXX bucket */
+.nav-folder-title[data-path^='_'] {
+  background: linear-gradient(135deg, #9bc4bf 0%, #89aaa5 55%, #8f6b98 100%) !important;
+  color: #1a1a1a !important;
+  border-left-color: #e3c55e !important;
+}
+
+/* 0-XXX bucket */
+.nav-folder-title[data-path^='0-'] {
+  background: linear-gradient(135deg, #9ebde2 0%, #869dcf 100%) !important;
+  color: #141414 !important;
+  border-left-color: #b8cdf0 !important;
+}
+
+/* 1-XXX bucket */
+.nav-folder-title[data-path^='1-'] {
+  background: linear-gradient(135deg, #93c39d 0%, #76a998 100%) !important;
+  color: #141414 !important;
+  border-left-color: #b8dec0 !important;
+}
+
+/* 2-XXX bucket */
+.nav-folder-title[data-path^='2-'] {
+  background: linear-gradient(135deg, #e3b96b 0%, #cd9336 100%) !important;
+  color: #141414 !important;
+  border-left-color: #f2ce8d !important;
+}
+
+/* 3-XXX and archive bucket */
+.nav-folder-title[data-path^='3-'],
+.nav-folder-title[data-path^='Z_Archive'] {
+  background: linear-gradient(135deg, #9b8777 0%, #786456 100%) !important;
+  color: var(--light0) !important;
+  border-left-color: #b39a87 !important;
+}
+
+/* Keep LinkStubs as special blended gradient */
+.nav-folder-title[data-path^='_LinkStubs'] {
+  background: linear-gradient(135deg, #8eb2a6 0%, #83a598 45%, #b16286 100%) !important;
+  color: #141414 !important;
+  border-left-color: #fabd2f !important;
+}
+
+/* ==========================================================================
+ * Integrated Snippets (Dataview cards + list marker alignment)
+ * Replaces external snippets:
+ * - dataview-cards.css
+ * - fix-ordered-list-marker-alignment.css
+ * ========================================================================== */
+
+/* Dataview TABLE as cards */
+.markdown-preview-view table.table-view-table {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 260px));
+  gap: 1.2rem !important;
+  align-items: start;
+  border: none !important;
+  background: transparent !important;
+  width: 100% !important;
+}
+
+.markdown-preview-view table.table-view-table thead {
+  display: none !important;
+}
+
+.markdown-preview-view table.table-view-table tbody {
+  display: contents !important;
+}
+
+.markdown-preview-view table.table-view-table tr {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  margin: 0 !important;
+  min-width: 220px !important;
+  max-width: 260px !important;
+  padding: 1rem 1rem 0.95rem !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(175, 105, 184, 0.34) !important;
+  background: linear-gradient(155deg, rgba(135, 64, 143, 0.2) 0%, rgba(41, 41, 41, 0.96) 100%) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.24) !important;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease !important;
+}
+
+.markdown-preview-view table.table-view-table tr:hover {
+  transform: translateY(-1px);
+  border-color: rgba(179, 71, 191, 0.7) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+.markdown-preview-view table.table-view-table td {
+  width: 100%;
+  padding: 0.2rem 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Disable row-number pseudo marker for card tables */
+.markdown-preview-view .table-view-table > tbody > tr > td:first-child::before {
+  content: none !important;
+}
+
+/* Dataview LIST as cards */
+.markdown-preview-view :is(ul.dataview-list-ul, ul.dv-list, div[class*="dataview"] > ul) {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 260px));
+  gap: 1.2rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.markdown-preview-view :is(ul.dataview-list-ul, ul.dv-list, div[class*="dataview"] > ul) > li {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  margin: 0 !important;
+  min-width: 220px !important;
+  max-width: 260px !important;
+  padding: 1rem 1rem 0.95rem !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(175, 105, 184, 0.34) !important;
+  background: linear-gradient(155deg, rgba(135, 64, 143, 0.2) 0%, rgba(41, 41, 41, 0.96) 100%) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.24) !important;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease !important;
+  list-style-type: none !important;
+}
+
+.markdown-preview-view :is(ul.dataview-list-ul, ul.dv-list, div[class*="dataview"] > ul) > li:hover {
+  transform: translateY(-1px);
+  border-color: rgba(179, 71, 191, 0.7) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Light theme adjustments for card readability */
+.theme-light .markdown-preview-view table.table-view-table tr,
+.theme-light .markdown-preview-view :is(ul.dataview-list-ul, ul.dv-list, div[class*="dataview"] > ul) > li {
+  background: linear-gradient(155deg, rgba(210, 186, 223, 0.58) 0%, rgba(248, 246, 241, 0.98) 100%) !important;
+  border-color: rgba(104, 35, 109, 0.28) !important;
+  box-shadow: 0 3px 10px rgba(64, 64, 64, 0.16) !important;
+}
+
+/* Fix ordered-list marker alignment for multi-paragraph items */
+.markdown-rendered ol li > p {
+  display: block !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-contentContainer ol li > p {
+  display: block !important;
 }

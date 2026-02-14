@@ -61,6 +61,17 @@ A Gruvbox-inspired theme for [Obsidian](https://obsidian.md) with academic and r
 3. Copy both files into the folder
 4. Enable the theme in Obsidian Settings → Appearance → Themes
 
+### Demo Vault
+This repository includes a public `demo-vault/` with sanitized example notes and folders for theme preview.
+
+To install the theme into it:
+
+```bash
+bash install.sh demo-vault
+```
+
+`demo-vault/.obsidian/` is intentionally not tracked, so local workspace/plugin state is never committed.
+
 ## Screenshots
 
 ### Dark Mode
