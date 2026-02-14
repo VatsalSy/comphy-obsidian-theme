@@ -1,5 +1,5 @@
 /*
- * CoMPhy Gruvbox Theme
+ * comphy-obsidian-theme
  * Generated file. Do not edit directly.
  * Source: src/theme/*.css
  */
@@ -8,7 +8,7 @@
 /* tokens.css */
 /* ========================================================================== */
 /*
- * CoMPhy Gruvbox 2.0
+ * comphy-obsidian-theme 2.0
  * Accent anchored to #68236D.
  */
 
@@ -28,7 +28,7 @@
   --accent-150: #e7d2ea;
   --accent-rgb: 104, 35, 109;
 
-  /* Supporting Gruvbox-adjacent accents */
+  /* Supporting accents */
   --support-aqua-600: #5d8f87;
   --support-aqua-500: #83a598;
   --support-aqua-400: #9bc4bf;

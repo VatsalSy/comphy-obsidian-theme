@@ -1,6 +1,6 @@
-# CoMPhy Gruvbox
+# comphy-obsidian-theme
 
-A Gruvbox-inspired Obsidian theme for academic and research workflows.
+A research-focused Obsidian theme for academic and research workflows.
 
 This version is a full rewrite with a modular architecture and a consistent visual system anchored to the accent seed `#68236D`.
 
@@ -51,13 +51,13 @@ See `MIGRATION.md` for deprecated legacy selectors and mapping guidance.
 
 1. Open Obsidian Settings.
 2. Go to **Appearance** -> **Themes**.
-3. Click **Manage** and search for `CoMPhy Gruvbox`.
+3. Click **Manage** and search for `comphy-obsidian-theme`.
 4. Click **Install and use**.
 
 ### Manual Installation
 
 1. Download `theme.css` and `manifest.json`.
-2. Create `.obsidian/themes/CoMPhy Gruvbox/` in your vault.
+2. Create `.obsidian/themes/comphy-obsidian-theme/` in your vault.
 3. Copy `theme.css` and `manifest.json` into that folder.
 4. Enable the theme from Obsidian Appearance settings.
 
@@ -98,7 +98,6 @@ This theme is optimized for [Hack Nerd Font](https://www.nerdfonts.com/font-down
 
 ## Credits
 
-- Inspired by [Gruvbox](https://github.com/morhetz/gruvbox)
 - Built for [CoMPhy Lab](https://comphy-lab.org)
 
 ## License

@@ -1,22 +1,22 @@
 {
-  "name": "obsidian-comphy-gruvbox",
+  "name": "comphy-obsidian-theme",
   "version": "1.0.0",
-  "description": "A Gruvbox-inspired Obsidian theme for academic and research workflows.",
+  "description": "A research-focused Obsidian theme for academic and research workflows.",
   "scripts": {
     "lint:css": "stylelint \"src/theme/**/*.css\" \"theme.css\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VatsalSy/obsidian-comphy-gruvbox.git"
+    "url": "git+https://github.com/VatsalSy/comphy-obsidian-theme.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VatsalSy/obsidian-comphy-gruvbox/issues"
+    "url": "https://github.com/VatsalSy/comphy-obsidian-theme/issues"
   },
-  "homepage": "https://github.com/VatsalSy/obsidian-comphy-gruvbox#readme",
+  "homepage": "https://github.com/VatsalSy/comphy-obsidian-theme#readme",
   "devDependencies": {
     "stylelint": "^17.3.0"
   }

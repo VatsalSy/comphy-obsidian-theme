@@ -32,7 +32,7 @@ fi
 
 {
   echo "/*"
-  echo " * CoMPhy Gruvbox Theme"
+  echo " * comphy-obsidian-theme"
   echo " * Generated file. Do not edit directly."
   echo " * Source: src/theme/*.css"
   echo " */"

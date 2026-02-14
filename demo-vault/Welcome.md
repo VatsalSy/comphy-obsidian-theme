@@ -1,6 +1,6 @@
-# CoMPhy Gruvbox Demo Vault
+# comphy-obsidian-theme Demo Vault
 
-This vault is a public, sanitized showcase for the `CoMPhy Gruvbox` theme.
+This vault is a public, sanitized showcase for the `comphy-obsidian-theme` theme.
 
 See [[api-reference]] for a quick command reference.
 
@@ -12,7 +12,7 @@ From the repository root, run:
 bash install.sh demo-vault
 ```
 
-This creates `demo-vault/.obsidian/themes/CoMPhy Gruvbox/` with the theme files.
+This creates `demo-vault/.obsidian/themes/comphy-obsidian-theme/` with the theme files.
 
 ## Demo Layout
 
