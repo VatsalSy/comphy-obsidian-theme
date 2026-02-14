@@ -20,14 +20,31 @@ a:hover,
 }
 
 a.external-link {
+  color: var(--link-external);
   background-image: none;
   padding-right: 0;
 }
 
-mark,
-.cm-highlight {
+a.external-link:hover {
+  color: color-mix(in srgb, var(--link-external) 70%, var(--text-primary) 30%);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--link-external) 72%, transparent);
+}
+
+.theme-dark mark,
+.theme-dark .cm-highlight {
   background: rgba(250, 189, 47, 0.38);
-  background: color-mix(in srgb, var(--support-yellow-500) 65%, transparent);
+  background: color-mix(in srgb, var(--support-yellow-500) 55%, transparent);
+  color: var(--text-primary);
+  color: color-mix(in srgb, var(--text-primary) 90%, #000 10%);
+  border-radius: var(--radius-xs);
+  padding: 0 0.2em;
+}
+
+.theme-light mark,
+.theme-light .cm-highlight {
+  background: rgba(250, 189, 47, 0.38);
+  background: color-mix(in srgb, var(--support-yellow-500) 42%, transparent);
   color: var(--text-primary);
   color: color-mix(in srgb, var(--text-primary) 90%, #000 10%);
   border-radius: var(--radius-xs);
@@ -79,9 +96,41 @@ mark,
   color: var(--code-comment);
 }
 
+.cm-s-obsidian span.cm-string,
+.cm-s-obsidian span.cm-string-2,
+.markdown-rendered .token.string {
+  color: var(--code-string);
+}
+
+.cm-s-obsidian span.cm-number,
+.markdown-rendered .token.number,
+.markdown-rendered .token.boolean {
+  color: var(--code-number);
+}
+
+.cm-s-obsidian span.cm-operator,
+.markdown-rendered .token.operator,
+.markdown-rendered .token.punctuation {
+  color: var(--code-operator);
+}
+
+.cm-s-obsidian span.cm-type,
+.cm-s-obsidian span.cm-builtin,
+.markdown-rendered .token.class-name,
+.markdown-rendered .token.builtin {
+  color: var(--code-type);
+}
+
+.cm-s-obsidian span.cm-property,
+.cm-s-obsidian span.cm-attribute,
+.markdown-rendered .token.property,
+.markdown-rendered .token.attr-name {
+  color: var(--code-property);
+}
+
 blockquote,
 .markdown-rendered blockquote {
-  border-left: 3px solid var(--blockquote-border-color);
+  border-left: 4px solid var(--blockquote-border-color);
   background: linear-gradient(95deg, var(--blockquote-background-color), transparent 70%);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   padding: var(--space-2) var(--space-4);
@@ -90,7 +139,7 @@ blockquote,
 
 .callout {
   border-radius: var(--radius-md);
-  border: 1px solid color-mix(in srgb, var(--accent-400) 36%, var(--background-modifier-border) 64%);
+  border: 1px solid color-mix(in srgb, var(--accent-400) 52%, var(--background-modifier-border) 48%);
   background: linear-gradient(160deg, color-mix(in srgb, var(--accent-250) 12%, transparent), transparent 60%);
 }
 
