@@ -27,6 +27,27 @@
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 2px 6px rgba(0, 0, 0, 0.28);
 }
 
+/* Keep folder labels dark and readable on hover/active (avoid Obsidian default white text). */
+.nav-folder-title[data-path]:is(:hover, .is-active, .is-active:hover),
+.nav-folder-title[data-path]:is(:hover, .is-active, .is-active:hover) .nav-folder-title-content,
+.nav-folder-title[data-path]:is(:hover, .is-active, .is-active:hover) .nav-folder-title-content * {
+  color: inherit !important;
+  -webkit-text-fill-color: currentcolor;
+}
+
+.nav-folder-title[data-path]:is(:hover, .is-active, .is-active:hover) .nav-folder-collapse-indicator,
+.nav-folder-title[data-path]:is(:hover, .is-active, .is-active:hover) .nav-folder-collapse-indicator svg,
+.nav-folder-title[data-path]:is(:hover, .is-active, .is-active:hover) .nav-folder-collapse-indicator svg path {
+  color: inherit !important;
+  fill: currentcolor;
+  stroke: currentcolor;
+}
+
+.nav-folder-title[data-path]:hover .nav-folder-title-content {
+  font-weight: var(--weight-semibold);
+  text-shadow: 0 0 0.01px currentcolor;
+}
+
 /* Structural buckets from existing workflow */
 .nav-folder-title[data-path^="_"] {
   background: var(--bucket-underscore-bg);
@@ -103,8 +124,8 @@
 }
 
 .nav-folder-title[data-path^="_LLM-Index"] {
-  background: linear-gradient(140deg, #c07497 0%, #9f4f76 100%);
-  color: #fff8ff;
+  background: linear-gradient(140deg, #d49ab5 0%, #c07497 100%);
+  color: #141017;
   border-left-color: #e0a4bf;
 }
 
@@ -143,8 +164,8 @@
 .nav-folder-title[data-path="readwise"],
 .nav-folder-title[data-path^="readwise/"],
 .nav-folder-title[data-path^="_ReadWise"] {
-  background: linear-gradient(140deg, #c578d0 0%, #9f56aa 100%);
-  color: #fff8ff;
+  background: linear-gradient(140deg, #d9a0e2 0%, #c078cc 100%);
+  color: #141017;
   border-left-color: #e4b6ea;
 }
 

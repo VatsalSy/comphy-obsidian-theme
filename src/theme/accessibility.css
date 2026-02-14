@@ -1,6 +1,18 @@
 /* Accessibility and motion controls. */
 
-:focus-visible {
+:where(
+  button,
+  .clickable-icon,
+  .nav-file-title,
+  .nav-folder-title,
+  a,
+  input,
+  textarea,
+  select,
+  .dropdown,
+  summary,
+  [role="button"]
+):focus-visible {
   outline: 2px solid var(--focus-ring) !important;
   outline-offset: 2px;
   box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.24);
@@ -33,6 +45,53 @@ textarea:focus-visible {
   background: var(--accent-150);
   background: color-mix(in srgb, var(--accent-150) 56%, var(--background-secondary) 44%);
   color: var(--accent-600);
+}
+
+/* Never draw keyboard focus rings around editor pane containers. */
+.workspace-leaf:focus-visible,
+.workspace-leaf-content:focus-visible,
+.workspace-leaf.mod-active:focus-visible,
+.workspace-leaf.mod-active .workspace-leaf-content:focus-visible,
+.workspace-leaf.mod-active .view-content:focus-visible,
+.workspace-leaf.mod-active .markdown-source-view:focus-visible,
+.workspace-leaf.mod-active .markdown-reading-view:focus-visible,
+.workspace-leaf.mod-active .markdown-preview-view:focus-visible,
+.workspace-leaf.mod-active .cm-editor:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove distracting active-pane border while preserving control focus rings. */
+.workspace .mod-root .workspace-leaf.mod-active,
+.workspace .mod-root .workspace-leaf.mod-active .workspace-leaf-content,
+.workspace .mod-root .workspace-leaf.mod-active .workspace-tab-container,
+.workspace .mod-root .workspace-leaf.mod-active .view-content {
+  --tab-outline-color: transparent;
+  --tab-outline-width: 0px;
+
+  border-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.workspace .mod-root .workspace-leaf.mod-active .cm-editor:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Restore subtle keyboard focus cues for pane content and editor surfaces. */
+.workspace .mod-root .workspace-leaf .workspace-leaf-content:focus-visible,
+.workspace .mod-root .workspace-leaf .markdown-reading-view:focus-visible,
+.workspace .mod-root .workspace-leaf .markdown-preview-view:focus-visible,
+.workspace .mod-root .workspace-leaf .cm-editor:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active .workspace-leaf-content:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active .markdown-reading-view:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active .markdown-preview-view:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active .cm-editor:focus-visible {
+  outline: 1px solid color-mix(in srgb, var(--focus-ring) 60%, var(--background-modifier-border) 40%) !important;
+  outline-offset: -1px;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--focus-ring) 22%, transparent) !important;
 }
 
 .nav-file-title.is-active,

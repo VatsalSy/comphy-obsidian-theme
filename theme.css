@@ -114,12 +114,12 @@
   --bucket-2-text: #141017;
   --bucket-2-accent: #f2ce8d;
 
-  --bucket-3-bg: linear-gradient(140deg, #9b8777 0%, #786456 100%);
-  --bucket-3-text: #fcf8f2;
+  --bucket-3-bg: linear-gradient(140deg, #b8a494 0%, #9b8777 100%);
+  --bucket-3-text: #141017;
   --bucket-3-accent: #b39a87;
 
-  --bucket-projects-bg: linear-gradient(140deg, #9d57a5 0%, #68236d 100%);
-  --bucket-projects-text: #fcf8f2;
+  --bucket-projects-bg: linear-gradient(140deg, #c084c9 0%, #9d57a5 100%);
+  --bucket-projects-text: #141017;
   --bucket-projects-accent: #d7b0dc;
 
   --bucket-linkstubs-bg: linear-gradient(140deg, #8eb2a6 0%, #83a598 45%, #b16286 100%);
@@ -137,7 +137,7 @@
   --text-primary: #ece6de;
   --text-secondary: #c8bdb2;
   --text-muted: #ab9f95;
-  --text-faint: #8f8378;
+  --text-faint: #9e9184;
   --text-inverse: #18131d;
 
   --border-subtle: rgba(232, 221, 210, 0.12);
@@ -145,15 +145,16 @@
 
   --link-color: #8cb6e8;
   --link-hover: #add2ff;
+  --link-external: #83a598;
   --heading-1: #b67abb;
   --heading-2: #ecad4c;
-  --heading-3: #f0d38d;
-  --heading-4: #9ec88f;
+  --heading-3: #edb83a;
+  --heading-4: #8ec07c;
   --heading-5: #96c8c5;
   --heading-6: #8db6e3;
 
   --tag-text: #f5ebf4;
-  --selection-bg: rgba(var(--accent-rgb), 0.35);
+  --selection-bg: rgba(var(--accent-rgb), 0.48);
   --focus-ring: #c88bcf;
 
   --panel-glow: radial-gradient(circle at 20% 0%, rgba(104, 35, 109, 0.3), transparent 46%);
@@ -180,16 +181,25 @@
 
   --background-modifier-border: var(--border-subtle);
   --background-modifier-border-hover: var(--border-strong);
+  --background-modifier-border-focus: transparent;
+  --background-modifier-border-focus-hover: transparent;
   --background-modifier-active-hover: rgba(var(--accent-rgb), 0.16);
   --background-modifier-hover: rgba(255, 255, 255, 0.04);
+  --tab-outline-color: transparent;
+  --tab-outline-width: 0px;
 
   --pre-code: #1b1622;
   --code-normal: #d6cde4;
   --code-comment: #9f93ad;
   --code-function: #8fd3ce;
   --code-keyword: #d798df;
+  --code-string: #b8bb26;
+  --code-number: #fabd2f;
+  --code-operator: #fe8019;
+  --code-type: #83a598;
+  --code-property: #c69acc;
 
-  --blockquote-border-color: rgba(var(--accent-rgb), 0.7);
+  --blockquote-border-color: rgba(var(--accent-rgb), 0.92);
   --blockquote-background-color: rgba(var(--accent-rgb), 0.08);
 }
 
@@ -203,7 +213,7 @@
   --text-primary: #2a2129;
   --text-secondary: #4a3d48;
   --text-muted: #665969;
-  --text-faint: #837489;
+  --text-faint: #6f5d7f;
   --text-inverse: #f9f5fd;
 
   --border-subtle: rgba(42, 33, 41, 0.14);
@@ -211,15 +221,16 @@
 
   --link-color: #5f3ea0;
   --link-hover: #4f2f91;
+  --link-external: #2d756c;
   --heading-1: #68236d;
   --heading-2: #98581a;
-  --heading-3: #8f6b2d;
-  --heading-4: #4e7a45;
+  --heading-3: #7a5517;
+  --heading-4: #3d6d35;
   --heading-5: #2f7773;
   --heading-6: #37638f;
 
   --tag-text: #faf6fb;
-  --selection-bg: rgba(var(--accent-rgb), 0.2);
+  --selection-bg: rgba(var(--accent-rgb), 0.30);
   --focus-ring: #7e3883;
 
   --panel-glow: radial-gradient(circle at 30% 0%, rgba(104, 35, 109, 0.11), transparent 52%);
@@ -246,16 +257,25 @@
 
   --background-modifier-border: var(--border-subtle);
   --background-modifier-border-hover: var(--border-strong);
+  --background-modifier-border-focus: transparent;
+  --background-modifier-border-focus-hover: transparent;
   --background-modifier-active-hover: rgba(var(--accent-rgb), 0.11);
   --background-modifier-hover: rgba(27, 19, 34, 0.04);
+  --tab-outline-color: transparent;
+  --tab-outline-width: 0px;
 
   --pre-code: #f1eaf5;
   --code-normal: #3b2b45;
   --code-comment: #70617b;
   --code-function: #226861;
   --code-keyword: #7a2f81;
+  --code-string: #637200;
+  --code-number: #8a6500;
+  --code-operator: #a04800;
+  --code-type: #2b6e66;
+  --code-property: #6b3570;
 
-  --blockquote-border-color: rgba(var(--accent-rgb), 0.56);
+  --blockquote-border-color: rgba(var(--accent-rgb), 0.75);
   --blockquote-background-color: rgba(var(--accent-rgb), 0.1);
 }
 
@@ -338,14 +358,14 @@ body {
 .markdown-rendered strong,
 .cm-strong {
   color: var(--accent-250);
-  color: color-mix(in srgb, var(--accent-250) 50%, var(--text-primary) 50%);
+  color: color-mix(in srgb, var(--accent-250) 65%, var(--text-primary) 35%);
   font-weight: var(--weight-semibold);
 }
 
 .markdown-rendered em,
 .cm-em {
   color: var(--support-green-500);
-  color: color-mix(in srgb, var(--support-green-500) 46%, var(--text-primary) 54%);
+  color: color-mix(in srgb, var(--support-green-500) 62%, var(--text-primary) 38%);
 }
 
 .cm-header,
@@ -415,7 +435,7 @@ body {
 .markdown-rendered hr {
   margin-block: calc(var(--space-6) * 1.6);
   border: 0;
-  height: 1px;
+  height: 2px;
   background-image: linear-gradient(
     to right,
     transparent 0%,
@@ -427,9 +447,9 @@ body {
   background-image: linear-gradient(
     to right,
     transparent 0%,
-    color-mix(in srgb, var(--accent-350) 45%, transparent) 16%,
-    color-mix(in srgb, var(--accent-500) 68%, transparent) 50%,
-    color-mix(in srgb, var(--accent-350) 45%, transparent) 84%,
+    color-mix(in srgb, var(--accent-350) 60%, transparent) 16%,
+    color-mix(in srgb, var(--accent-500) 85%, transparent) 50%,
+    color-mix(in srgb, var(--accent-350) 60%, transparent) 84%,
     transparent 100%
   );
 }
@@ -484,14 +504,31 @@ a:hover,
 }
 
 a.external-link {
+  color: var(--link-external);
   background-image: none;
   padding-right: 0;
 }
 
-mark,
-.cm-highlight {
+a.external-link:hover {
+  color: color-mix(in srgb, var(--link-external) 70%, var(--text-primary) 30%);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--link-external) 72%, transparent);
+}
+
+.theme-dark mark,
+.theme-dark .cm-highlight {
   background: rgba(250, 189, 47, 0.38);
-  background: color-mix(in srgb, var(--support-yellow-500) 65%, transparent);
+  background: color-mix(in srgb, var(--support-yellow-500) 55%, transparent);
+  color: var(--text-primary);
+  color: color-mix(in srgb, var(--text-primary) 90%, #000 10%);
+  border-radius: var(--radius-xs);
+  padding: 0 0.2em;
+}
+
+.theme-light mark,
+.theme-light .cm-highlight {
+  background: rgba(250, 189, 47, 0.38);
+  background: color-mix(in srgb, var(--support-yellow-500) 42%, transparent);
   color: var(--text-primary);
   color: color-mix(in srgb, var(--text-primary) 90%, #000 10%);
   border-radius: var(--radius-xs);
@@ -511,20 +548,57 @@ mark,
   padding: 0.08em 0.38em;
 }
 
-.markdown-rendered pre,
-.HyperMD-codeblock,
-.HyperMD-codeblock-bg,
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+.markdown-rendered pre {
   background: linear-gradient(170deg, color-mix(in srgb, var(--pre-code) 82%, var(--accent-650) 18%), var(--pre-code));
   color: var(--code-normal);
   border: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
-}
-
-.markdown-rendered pre {
   padding: var(--space-4);
   overflow-x: auto;
+}
+
+/* Keep code fences in edit/source mode as one coherent container, not per-line pills. */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-bg {
+  background: linear-gradient(170deg, color-mix(in srgb, var(--pre-code) 82%, var(--accent-650) 18%), var(--pre-code));
+  color: var(--code-normal);
+  border-left: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
+  border-right: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock.HyperMD-codeblock-begin,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-bg.HyperMD-codeblock-begin {
+  border-top: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+  margin-top: var(--space-2);
+  padding-top: calc(var(--space-1) + 1px);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock.HyperMD-codeblock-end,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-bg.HyperMD-codeblock-end {
+  border-bottom: 1px solid color-mix(in srgb, var(--accent-500) 30%, var(--background-modifier-border) 70%);
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+  padding-bottom: calc(var(--space-1) + 1px);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin, .HyperMD-codeblock-end),
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin, .HyperMD-codeblock-end) {
+  padding-inline: var(--space-4);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin .cm-formatting-code-block,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-end .cm-formatting-code-block {
+  color: var(--text-muted);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin .cm-hmd-codeblock {
+  color: color-mix(in srgb, var(--accent-200) 72%, var(--text-primary) 28%);
 }
 
 .cm-s-obsidian span.cm-keyword,
@@ -543,9 +617,41 @@ mark,
   color: var(--code-comment);
 }
 
+.cm-s-obsidian span.cm-string,
+.cm-s-obsidian span.cm-string-2,
+.markdown-rendered .token.string {
+  color: var(--code-string);
+}
+
+.cm-s-obsidian span.cm-number,
+.markdown-rendered .token.number,
+.markdown-rendered .token.boolean {
+  color: var(--code-number);
+}
+
+.cm-s-obsidian span.cm-operator,
+.markdown-rendered .token.operator,
+.markdown-rendered .token.punctuation {
+  color: var(--code-operator);
+}
+
+.cm-s-obsidian span.cm-type,
+.cm-s-obsidian span.cm-builtin,
+.markdown-rendered .token.class-name,
+.markdown-rendered .token.builtin {
+  color: var(--code-type);
+}
+
+.cm-s-obsidian span.cm-property,
+.cm-s-obsidian span.cm-attribute,
+.markdown-rendered .token.property,
+.markdown-rendered .token.attr-name {
+  color: var(--code-property);
+}
+
 blockquote,
 .markdown-rendered blockquote {
-  border-left: 3px solid var(--blockquote-border-color);
+  border-left: 4px solid var(--blockquote-border-color);
   background: linear-gradient(95deg, var(--blockquote-background-color), transparent 70%);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   padding: var(--space-2) var(--space-4);
@@ -554,7 +660,7 @@ blockquote,
 
 .callout {
   border-radius: var(--radius-md);
-  border: 1px solid color-mix(in srgb, var(--accent-400) 36%, var(--background-modifier-border) 64%);
+  border: 1px solid color-mix(in srgb, var(--accent-400) 52%, var(--background-modifier-border) 48%);
   background: linear-gradient(160deg, color-mix(in srgb, var(--accent-250) 12%, transparent), transparent 60%);
 }
 
@@ -633,10 +739,37 @@ input.task-list-item-checkbox:checked {
 .suggestion-item,
 .menu,
 .dropdown,
+select,
 .modal,
 .prompt-results {
   background: color-mix(in srgb, var(--background-secondary) 88%, var(--accent-650) 12%);
   border-color: var(--background-modifier-border);
+}
+
+.dropdown,
+select,
+.setting-item-control .dropdown,
+.setting-item-control select {
+  background-image: none !important;
+  background-repeat: no-repeat !important;
+  font-family: var(--font-display), sans-serif;
+  font-variant-ligatures: none;
+}
+
+/* Keep native dropdown rendering to avoid cross-platform custom select artifacts. */
+select {
+  -webkit-appearance: menulist;
+  appearance: auto;
+  color: var(--text-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-sm);
+  padding: 0.3em 0.6em;
+}
+
+.menu-item,
+.dropdown-option,
+.suggestion-item {
+  background-image: none !important;
 }
 
 .suggestion-item.is-selected,
@@ -745,6 +878,27 @@ table th {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 2px 6px rgba(0, 0, 0, 0.28);
 }
 
+/* Keep folder labels dark and readable on hover/active (avoid Obsidian default white text). */
+.nav-folder-title[data-path]:is(:hover, .is-active, .is-active:hover),
+.nav-folder-title[data-path]:is(:hover, .is-active, .is-active:hover) .nav-folder-title-content,
+.nav-folder-title[data-path]:is(:hover, .is-active, .is-active:hover) .nav-folder-title-content * {
+  color: inherit !important;
+  -webkit-text-fill-color: currentcolor;
+}
+
+.nav-folder-title[data-path]:is(:hover, .is-active, .is-active:hover) .nav-folder-collapse-indicator,
+.nav-folder-title[data-path]:is(:hover, .is-active, .is-active:hover) .nav-folder-collapse-indicator svg,
+.nav-folder-title[data-path]:is(:hover, .is-active, .is-active:hover) .nav-folder-collapse-indicator svg path {
+  color: inherit !important;
+  fill: currentcolor;
+  stroke: currentcolor;
+}
+
+.nav-folder-title[data-path]:hover .nav-folder-title-content {
+  font-weight: var(--weight-semibold);
+  text-shadow: 0 0 0.01px currentcolor;
+}
+
 /* Structural buckets from existing workflow */
 .nav-folder-title[data-path^="_"] {
   background: var(--bucket-underscore-bg);
@@ -821,8 +975,8 @@ table th {
 }
 
 .nav-folder-title[data-path^="_LLM-Index"] {
-  background: linear-gradient(140deg, #c07497 0%, #9f4f76 100%);
-  color: #fff8ff;
+  background: linear-gradient(140deg, #d49ab5 0%, #c07497 100%);
+  color: #141017;
   border-left-color: #e0a4bf;
 }
 
@@ -861,8 +1015,8 @@ table th {
 .nav-folder-title[data-path="readwise"],
 .nav-folder-title[data-path^="readwise/"],
 .nav-folder-title[data-path^="_ReadWise"] {
-  background: linear-gradient(140deg, #c578d0 0%, #9f56aa 100%);
-  color: #fff8ff;
+  background: linear-gradient(140deg, #d9a0e2 0%, #c078cc 100%);
+  color: #141017;
   border-left-color: #e4b6ea;
 }
 
@@ -1013,16 +1167,20 @@ table th {
 /* Graph view */
 .graph-view.color-circle,
 .graph-view.color-fill-highlight,
-.graph-view.color-line-highlight,
+.graph-view.color-line-highlight {
+  color: var(--support-aqua-500) !important;
+  fill: var(--support-aqua-500) !important;
+}
+
 .graph-view.color-fill-focused {
-  color: var(--accent-300) !important;
-  fill: var(--accent-300) !important;
+  color: var(--accent-350) !important;
+  fill: var(--accent-350) !important;
 }
 
 .theme-dark .graph-view.color-arrow,
 .graph-view.color-line,
 .graph-view.color-text {
-  color: color-mix(in srgb, var(--accent-250) 48%, var(--text-secondary) 52%) !important;
+  color: color-mix(in srgb, var(--accent-250) 36%, var(--text-secondary) 64%) !important;
 }
 
 .graph-view.color-fill-tag {
@@ -1063,6 +1221,17 @@ table th {
 
 #calendar-container .year {
   color: var(--accent-300);
+}
+
+#calendar-container table {
+  border: none;
+  border-collapse: separate;
+}
+
+#calendar-container table :is(th, td) {
+  border: none;
+  padding: 0;
+  background: transparent;
 }
 
 /* Popovers and embeds */
@@ -1159,7 +1328,19 @@ pre.language-info::before { content: "Info"; }
 /* ========================================================================== */
 /* Accessibility and motion controls. */
 
-:focus-visible {
+:where(
+  button,
+  .clickable-icon,
+  .nav-file-title,
+  .nav-folder-title,
+  a,
+  input,
+  textarea,
+  select,
+  .dropdown,
+  summary,
+  [role="button"]
+):focus-visible {
   outline: 2px solid var(--focus-ring) !important;
   outline-offset: 2px;
   box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.24);
@@ -1192,6 +1373,53 @@ textarea:focus-visible {
   background: var(--accent-150);
   background: color-mix(in srgb, var(--accent-150) 56%, var(--background-secondary) 44%);
   color: var(--accent-600);
+}
+
+/* Never draw keyboard focus rings around editor pane containers. */
+.workspace-leaf:focus-visible,
+.workspace-leaf-content:focus-visible,
+.workspace-leaf.mod-active:focus-visible,
+.workspace-leaf.mod-active .workspace-leaf-content:focus-visible,
+.workspace-leaf.mod-active .view-content:focus-visible,
+.workspace-leaf.mod-active .markdown-source-view:focus-visible,
+.workspace-leaf.mod-active .markdown-reading-view:focus-visible,
+.workspace-leaf.mod-active .markdown-preview-view:focus-visible,
+.workspace-leaf.mod-active .cm-editor:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove distracting active-pane border while preserving control focus rings. */
+.workspace .mod-root .workspace-leaf.mod-active,
+.workspace .mod-root .workspace-leaf.mod-active .workspace-leaf-content,
+.workspace .mod-root .workspace-leaf.mod-active .workspace-tab-container,
+.workspace .mod-root .workspace-leaf.mod-active .view-content {
+  --tab-outline-color: transparent;
+  --tab-outline-width: 0px;
+
+  border-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.workspace .mod-root .workspace-leaf.mod-active .cm-editor:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Restore subtle keyboard focus cues for pane content and editor surfaces. */
+.workspace .mod-root .workspace-leaf .workspace-leaf-content:focus-visible,
+.workspace .mod-root .workspace-leaf .markdown-reading-view:focus-visible,
+.workspace .mod-root .workspace-leaf .markdown-preview-view:focus-visible,
+.workspace .mod-root .workspace-leaf .cm-editor:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active .workspace-leaf-content:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active .markdown-reading-view:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active .markdown-preview-view:focus-visible,
+.workspace .mod-root .workspace-leaf.mod-active .cm-editor:focus-visible {
+  outline: 1px solid color-mix(in srgb, var(--focus-ring) 60%, var(--background-modifier-border) 40%) !important;
+  outline-offset: -1px;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--focus-ring) 22%, transparent) !important;
 }
 
 .nav-file-title.is-active,

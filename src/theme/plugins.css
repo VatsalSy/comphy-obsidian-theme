@@ -69,16 +69,20 @@
 /* Graph view */
 .graph-view.color-circle,
 .graph-view.color-fill-highlight,
-.graph-view.color-line-highlight,
+.graph-view.color-line-highlight {
+  color: var(--support-aqua-500) !important;
+  fill: var(--support-aqua-500) !important;
+}
+
 .graph-view.color-fill-focused {
-  color: var(--accent-300) !important;
-  fill: var(--accent-300) !important;
+  color: var(--accent-350) !important;
+  fill: var(--accent-350) !important;
 }
 
 .theme-dark .graph-view.color-arrow,
 .graph-view.color-line,
 .graph-view.color-text {
-  color: color-mix(in srgb, var(--accent-250) 48%, var(--text-secondary) 52%) !important;
+  color: color-mix(in srgb, var(--accent-250) 36%, var(--text-secondary) 64%) !important;
 }
 
 .graph-view.color-fill-tag {
@@ -119,6 +123,17 @@
 
 #calendar-container .year {
   color: var(--accent-300);
+}
+
+#calendar-container table {
+  border: none;
+  border-collapse: separate;
+}
+
+#calendar-container table :is(th, td) {
+  border: none;
+  padding: 0;
+  background: transparent;
 }
 
 /* Popovers and embeds */
