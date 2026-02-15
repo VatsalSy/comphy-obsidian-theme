@@ -61,6 +61,7 @@
   --font-size-ui: 13px;
   --font-size-body: 16px;
   --font-size-code: 0.92em;
+  --math-render-scale: 1.2;
   --line-height-body: 1.6;
 
   --h1-size: 2.05rem;
@@ -599,6 +600,14 @@ a.external-link:hover {
 
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin .cm-hmd-codeblock {
   color: color-mix(in srgb, var(--accent-200) 72%, var(--text-primary) 28%);
+}
+
+/* Scale rendered LaTeX math in reading and live preview views. */
+.markdown-rendered mjx-container,
+.markdown-rendered .math,
+.markdown-source-view.mod-cm6 mjx-container,
+.markdown-source-view.mod-cm6 .cm-embed-math mjx-container {
+  font-size: calc(1em * var(--math-render-scale));
 }
 
 .cm-s-obsidian span.cm-keyword,

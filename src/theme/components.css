@@ -117,6 +117,14 @@ a.external-link:hover {
   color: color-mix(in srgb, var(--accent-200) 72%, var(--text-primary) 28%);
 }
 
+/* Scale rendered LaTeX math in reading and live preview views. */
+.markdown-rendered mjx-container,
+.markdown-rendered .math,
+.markdown-source-view.mod-cm6 mjx-container,
+.markdown-source-view.mod-cm6 .cm-embed-math mjx-container {
+  font-size: calc(1em * var(--math-render-scale));
+}
+
 .cm-s-obsidian span.cm-keyword,
 .markdown-rendered .token.keyword {
   color: var(--code-keyword);
