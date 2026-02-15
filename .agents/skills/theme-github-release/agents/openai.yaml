@@ -1,0 +1,4 @@
+interface:
+  display_name: "Theme GitHub Release"
+  short_description: "Bump, tag, and publish theme releases"
+  default_prompt: "Use $theme-github-release to publish the next version of this theme on GitHub with version bumps, tag push, and release notes."
