@@ -178,7 +178,9 @@ fi
 
 run_cmd git add manifest.json package.json versions.json theme.css
 run_cmd git commit -m "Release $VERSION"
-run_cmd git tag "$VERSION"
+# Use an explicit message so non-interactive runs never block on TAG_EDITMSG.
+# Keep `-s` so release tags are always signed even if local config changes.
+run_cmd git tag -s -m "Release $VERSION" "$VERSION"
 run_cmd git push origin HEAD
 run_cmd git push origin "$VERSION"
 
