@@ -1,6 +1,6 @@
 {
   "name": "comphy-obsidian-theme",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A research-focused Obsidian theme for academic and research workflows.",
   "scripts": {
     "lint:css": "stylelint \"src/theme/**/*.css\" \"theme.css\"",
