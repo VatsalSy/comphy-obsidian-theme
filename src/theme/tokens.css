@@ -180,6 +180,23 @@
   --tab-outline-color: transparent;
   --tab-outline-width: 0px;
 
+  --floating-suggestion-hover-bg: linear-gradient(
+    120deg,
+    color-mix(in srgb, var(--accent-650) 24%, var(--background-secondary-alt) 76%),
+    color-mix(in srgb, var(--accent-550) 18%, var(--background-secondary) 82%)
+  );
+  --floating-suggestion-hover-border: color-mix(in srgb, var(--accent-300) 28%, var(--background-modifier-border) 72%);
+  --floating-suggestion-hover-text: var(--text-primary);
+  --floating-suggestion-hover-muted: color-mix(in srgb, var(--accent-150) 24%, var(--text-secondary) 76%);
+  --floating-suggestion-selected-bg: linear-gradient(
+    120deg,
+    color-mix(in srgb, var(--accent-450) 54%, var(--background-secondary-alt) 46%),
+    color-mix(in srgb, var(--accent-550) 70%, var(--background-secondary) 30%)
+  );
+  --floating-suggestion-selected-border: color-mix(in srgb, var(--accent-250) 48%, transparent);
+  --floating-suggestion-selected-text: var(--tag-text);
+  --floating-suggestion-selected-muted: color-mix(in srgb, var(--accent-150) 60%, var(--tag-text) 40%);
+
   --pre-code: #1b1622;
   --code-normal: #d6cde4;
   --code-comment: #9f93ad;
@@ -255,6 +272,23 @@
   --background-modifier-hover: rgba(27, 19, 34, 0.04);
   --tab-outline-color: transparent;
   --tab-outline-width: 0px;
+
+  --floating-suggestion-hover-bg: linear-gradient(
+    120deg,
+    color-mix(in srgb, var(--accent-150) 72%, var(--background-primary) 28%),
+    color-mix(in srgb, var(--accent-200) 48%, var(--background-secondary) 52%)
+  );
+  --floating-suggestion-hover-border: color-mix(in srgb, var(--accent-300) 40%, var(--background-modifier-border) 60%);
+  --floating-suggestion-hover-text: var(--text-primary);
+  --floating-suggestion-hover-muted: color-mix(in srgb, var(--accent-650) 22%, var(--text-secondary) 78%);
+  --floating-suggestion-selected-bg: linear-gradient(
+    120deg,
+    color-mix(in srgb, var(--accent-200) 82%, var(--background-primary) 18%),
+    color-mix(in srgb, var(--accent-250) 62%, var(--background-secondary) 38%)
+  );
+  --floating-suggestion-selected-border: color-mix(in srgb, var(--accent-400) 40%, var(--background-modifier-border) 60%);
+  --floating-suggestion-selected-text: var(--text-primary);
+  --floating-suggestion-selected-muted: color-mix(in srgb, var(--accent-650) 40%, var(--text-secondary) 60%);
 
   --pre-code: #f1eaf5;
   --code-normal: #3b2b45;
